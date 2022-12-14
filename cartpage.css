@@ -1,0 +1,86 @@
+#main_container{
+    border:1px solid;
+    display: flex;
+    gap:50px
+    /* grid-template-columns: repeat(3); */
+}
+
+#product_container{
+    border:1px solid blue;
+    /* height:300px; */
+    width:60%;
+    /* gap:10px */
+}
+
+#price_container{
+    border:1px solid red;
+    width:30%;
+    height:300px
+}
+
+.product{
+    border:1px solid black;
+    display:flex;
+    height:auto;
+    width:80%;
+    margin:auto;
+    gap:20px;
+    margin-top: 10px;
+    justify-content: center;
+    
+}
+
+.productleft{
+    border:1px solid red;
+    height:100%;
+    width:45%
+}
+
+.product_detailsright{
+    border:1px solid black;
+    height :100%;
+    width:45%
+}
+
+#buttons{
+    /* background-color: red; */
+    display: flex;
+}
+
+.productbutton{
+    background-color: transparent;
+    /* gap: 20px; */
+    border: 0;
+    border-radius: 20px;
+    margin-left: 20px;
+    padding: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.orderbutton{
+    margin-top: 20px;
+}
+.addtowishlist:hover{
+    cursor: pointer
+}
+.remove:hover{
+    cursor:pointer
+}
+
+.orderbutton{
+    background-color:#ff6600;
+    border: 0px;
+    /* border-radius: 20px; */
+    /* padding: 10px; */
+    padding:10px 20px 10px 20px ;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-left: 30px;
+}
+.orderbutton:hover{
+    cursor:pointer
+}
+
+.productimage{
+    width: 100%;
+    /* height:100% */
+}
