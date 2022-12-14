@@ -1,0 +1,55 @@
+body{
+
+}
+
+.p_container{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.SignIn_page{
+    width:40%;
+    margin: 2%;
+    margin-top:10%;
+   padding:3%;
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+   
+}
+.SignIn_page:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.SignIn_page label{
+    display:block;
+    padding-bottom:2%;
+    text-align: start;
+    font-size: 20px;
+}
+
+.SignIn_page input{
+    display:block;
+    padding:3%;
+    width:91%;
+    font-size:100%;
+}
+
+#button{
+    width:98%;
+    font-size:120%;
+    font-weight: bolder;
+    background-color: rgb(192, 192, 250);
+    border:none;
+    border-radius:8% 5%;  
+}
+#button:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#sign_up_link{
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+
+
