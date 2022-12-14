@@ -1,0 +1,115 @@
+*{
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+}
+#navBar{
+  border-bottom: 1px solid black;
+  position: sticky;
+  top: 0px;
+  height: auto;
+  background-color: white;
+  padding-bottom: 10px;
+}
+
+#navTop{
+ display: flex;
+ /* flex-wrap:wrap; */
+ /* align-items:center; */
+ justify-content:end;
+ /* border: 1px solid black; */
+ padding-top: 10px;
+ padding-right: 10px;
+ padding-left: 10px;
+ padding-bottom: 10px;
+}
+#navTop>div{
+ padding-left: 50px;
+}
+#navBottom{
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+margin-top: 20px;
+}
+.box{
+ width: 1300px;
+ height: 50px;
+ background-color: white;
+ border: 1px solid black;
+ display: flex;
+align-items: center;
+padding: 20px;
+}
+.box>i{
+ font-size: 20px;
+ color: #777;
+ 
+}
+.box>input{
+ flex: 1;
+ height: 40px;
+ border: none;
+ outline: none;
+ font-size: 15px;
+ 
+}
+.wish-alert{
+ font-size: 20px;
+}
+.wish-alert>i:hover{
+color: red;
+}
+.sub-help{
+ display: none;
+}
+.help-signin-account:hover .sub-help{
+ display: block;
+ position: absolute;
+ background-color: white;
+ /* margin-top: 15px; */
+ margin-left: -35px;
+ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.help-signin-account:hover .sub-help{
+ display: block;
+ 
+ list-style: none;
+ padding:15px;
+ 
+ 
+}
+.help-signin-account:hover .sub-help li a{
+
+display: flex;
+color: black;
+padding-top: 10px;
+padding-bottom: 20px;
+text-decoration: none;
+
+}
+
+.help-signin-account:hover .sub-help li {
+ width: 150px;
+ border-bottom: 1px solid black;
+}
+.help-signin-account:hover .sub-account li:last-child{
+  border-bottom: none;
+}
+.help-signin-account:hover .sub-help li a:hover{
+ text-decoration: underline;
+}
+.help-signin-account:hover .sub-account{
+ margin-left: -125px;
+ box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.sub-account>li:last-child{
+text-align: center;
+}
+.sub-account>li>button{
+ margin-top: 20px;
+ height: 40px;
+ width: 80%;
+ background-color: #f2f2f2;
+ border: none;
+}
