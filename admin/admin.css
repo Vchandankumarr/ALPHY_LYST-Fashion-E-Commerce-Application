@@ -1,0 +1,10 @@
+.task{
+    display: flex;
+}
+.task .content{
+    flex: 2;
+    /* border: 1px solid black; */
+}
+.task .text{
+    min-width: 98%;
+}

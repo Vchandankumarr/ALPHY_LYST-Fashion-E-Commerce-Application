@@ -1,0 +1,69 @@
+body{
+    text-align: center;
+    font-size: 17px;
+}
+
+#SignUp_page{
+    width:40%;
+    height:auto;
+    margin: 3% 28%;
+   padding:3%;
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.SignUp_page:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+#SignUp_page label{
+    display:block;
+    padding-bottom:2%;
+    text-align: start;
+    font-size: 20px;
+}
+
+#SignUp_page input{
+    display:block;
+    padding:3%;
+    width:90%;
+    font-size:100%;
+}
+
+#button{
+    width:100%;
+    font-size:120%;
+    font-weight: bolder;
+    background-color: rgb(192, 192, 250);
+    border:none;
+    border-radius:8% 5%;
+   margin-left:5%;
+}
+#button:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#sign_In_link{
+    text-decoration: none;
+    font-weight: bolder;
+}
+ a{
+    text-decoration: none;
+ }
+
+ p{
+    margin:5% 0%;
+}
+.text{
+    text-align: start;
+}
+
+
+
+
+
+
+
+
+
+
+
