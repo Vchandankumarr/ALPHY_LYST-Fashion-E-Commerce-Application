@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpPage</title>
+    <!-- <script src="https://kit.fontawesome.com/d031ff412f.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #navbar{
+            padding: 70px 0px;
+            width: 60%;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+        }
+        #navbar>h1{
+            font-size: 50px;
+            font-weight: lighter;
+            /* margin-left: -285px; */
+        }
+        #navbar>div>input{
+           width:92%;
+           padding: 18px 10px;
+           border:none;
+           
+        }
+        #navbar>div>input:focus{
+           outline: none;
+           
+        }
+        #navbar>div{
+            margin:20px 0 ;
+         border: 1px solid black;
+         background-color: #ffffff;
+        }
+        #navbar>p{
+            font-weight: 500;
+            font-size: 18px;
+        }
+        #navbar>p>span>a{
+            text-decoration: none;
+            font-weight:bolder;
+            color: black;
+            font-size: large;
+        }
+        #nav>img{
+            width:6%;
+            background-color: #f5f4f2;
+        }
+        #parent{
+            background-color: #f5f4f2;
+
+        }
+        #promoted_articles{
+            padding: 50px 0px;
+            justify-content: center;
+        }
+        #promoted_articles>:nth-child(2){
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+        #promoted_articles>:nth-child(2)>li{
+           margin-bottom: 10px;
+        }
+        #promoted_articles>:nth-child(2)>li>a{
+          font-size: 16px;
+          color: black;
+          font-weight: bold;
+        }
+        #promoted_articles>div>h3{
+          font-size: 26px;
+          color: black;
+          font-weight: lighter;
+        }
+        #all_content{
+            width: 70%;
+            margin: auto;
+            padding: 60px 0;
+            padding-bottom: 90px;
+        }
+        #promoted_articles+p{
+            font-size: 20px;
+            font-weight:300;
+            color: black;
+            margin-bottom: 40px;
+
+        }
+        #promoted_articles+p+p{
+            font-size: 17px;
+            font-weight:bold;
+            margin-bottom: 40px;
+
+        }
+        #promoted_articles+p+p>span>a{
+            font-size: 21px;
+            color: black;
+
+        }
+        #cards{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+        }
+        #cards>div{
+            padding: 50px;
+            border: 1px solid black;
+            text-align: center;
+            background-color: #f5f4f2;
+        }
+        #cards>div>i{
+           margin-bottom: 28px;
+        }
+        #cards>div>div>a{
+          text-decoration: none;
+          font-size: 15px;
+          
+           font-weight: bolder;
+          color: black;
+        }
+        #cards>div>div>p{
+          font-size: 15px;
+          font-weight: lighter;
+        }
+        #cards+div{
+            width: 35%;
+            margin:40px auto;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+        #cards+div>span>a{
+           color: black;
+        }
+        #cards+div+div{
+           border-top: 1.2px solid black;
+        }
+        #cards+div+div>a{
+          color: black;
+          font-weight: bold;
+        }
+        #cards+div+div>a+p~p{
+          margin-bottom: none;
+        }
+      
+        #cards+div+div>p{
+          /* color: black; */
+          /* font-weight: bolder; */
+          font-size: 18px;
+        }
+        #cards+div+div+div>:nth-child(1){
+         padding: 11px 65px;
+         background-color: #cafc4f;
+         border: 1px solid black;
+         font-size: 20px;
+        }
+        #cards+div+div+div{
+        margin-top: 30px;
+        }
+        #cards+div+div+div>:nth-child(2){
+         padding: 11px 40px;
+         border: 1px solid rgb(119, 117, 117);
+         font-size: 20px;
+         color: #075e54;
+        }
+        #navbar>div>button{
+            /* position: absolute;
+            top: 0;
+            right: 0; */
+            border: none;
+            background-color: transparent;
+
+        }
+        #prefer{
+            padding: 40px 0;
+        }
+        #prefer>h1{
+            margin-bottom: 18px
+        }
+        #prefer>a+p{
+            margin: 24px 0;
+        }
+        #promoted_articles>:nth-child(1){
+            margin-bottom: 20px;
+        }
+        #cards>div:hover{
+            background-color: #e1f89e;
+            cursor: pointer;
+        }
+
+       
+
+
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="nav">
+            <img src="./images/WhatsApp Image 2022-12-13 at 11.38.06.jpeg" alt="">
+        </div>
+        <div id="navbar">
+            <h1>HOW CAN WE HELP YOU TODAY?</h1>
+            <div>
+                <input type="text" placeholder="SEARCH LYST HELP"><button><i class="fa fa-search fa-2x"></i></button>
+            </div>
+               
+          
+            <p>Popular articles:<span><a href=""> Getting Started Checklist,</a><a href="">Where's my order?,</a><a href=""> What is Klarna?</a></span></p>
+        </div> 
+    </div>
+   
+        <div id="all_content">
+            <div id="promoted_articles">
+                <div>
+                    <h3>PROMOTED ARTICLES</h3>
+                </div>
+                <div>
+                    <li><a href="">Placing a new order with Lyst</a></li>
+                    <li><a href="">Where is my order?</a></li>
+                    <li><a href="">Item authenticity</a></li>
+                    <li><a href="">Do you have my size?</a></li>
+                    <li><a href="">What's the shipping policy?</a></li>
+                    <li><a href="">What's the return policy?</a></li>
+                </div>
+            </div>
+            <p>Lyst is the definitive fashion shopping platform, used by millions of shoppers globally 
+                to search and discover the world’s biggest and best selection of fashion brands and stores.
+                 Customer success is our top priority, so on the rare occasions that something doesn’t go to plan,
+                  we’ll always do what we can to make it right.
+            </p>
+            <p>New to Lyst? Have a look at our <span><a href="">Getting Started Checklist</a></span> or the FAQ resources below.</p>
+            <div id="cards">
+                <div>
+                    <i class="fa-sharp fa-solid fa-bag-shopping fa-4x"></i>
+                    <div>
+                        <a href="">ORDERS</a>
+                        <p>Amendments, cancelations...</p>
+                    </div>
+                  
+                </div>
+                <div>
+                    <div>
+                        <div>
+                            <i class="fa-regular fa-credit-card-front"></i>
+                        </div>
+                       
+                        <a href="">PAYMENT AND PROMOTIONS</a>
+                        <p>Klarna,promo codes,currenciess...</p>
+                    </div>
+                   
+                </div>
+                <div>
+                    <i class="fa-sharp fa-solid fa-shirt fa-4x "></i>
+                    <div>
+                        <a href="">RETAILERS,PRODUCTS AND SIZING</a>
+                    <P>Unknwn size wrong image...</P>
+                    </div>
+                    
+                </div>
+                <div>
+                    <i class="fa-sharp fa-solid fa-truck fa-4x"></i>
+                    <div>
+                        <a href="">SHIPPING</a>
+                    <p>Delivery policy, taxes or duty...</p>
+                    </div>
+                    
+                </div>
+                <div>
+                    <i class="fa-solid fa-arrow-rotate-left fa-4x"></i>
+                    <div>
+                        <a href="">REtURNS</a>
+                    <p>Returnss policy, exchanges</p>
+                    </div>
+                    
+                </div>
+                <div>
+                    <i class="fa-solid fa-person-dress fa-4x"></i>
+                    <div>
+                        <a href="">ACCOUNTS AND EMAILS</a>
+                        <p>Password reset, unsubcribe from marketing, account deletion...</p>
+                    </div>
+
+                </div>
+            </div>
+            <div>
+                or,<span><a href=""> browse our full list of help articles</a></span>
+            </div>
+            <div id="prefer">
+                <h1>PREFER TO CONTACT US?</h1>
+                <P>You can reach our dedicated customer care team by email:</P>
+                <a href="">customercare@ly.st</a>
+                <p>Please note that for order tracking updates, amendments or cancellations, you will need to contact the retailer fulfilling your order directly</p>
+                <h1>REGISTERED OFFICE</h1>
+                <p>Lyst Limited <br>
+                Floor 7, The Minster Building <br>
+                21 Mincing Lane <br>
+                London <br>
+                EC3R 7AG
+            </p>
+               
+            </div>
+            <div>
+                <button>Customer Care</button>
+                <button><i class="fa-brands fa-whatsapp"></i>&nbsp;&nbsp;Masage Us On Whatsapp</button>
+            </div>
+
+           
+        </div>
+
+
+</body>
+</html>
