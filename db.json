@@ -1,0 +1,306 @@
+{
+  "register": [
+    {
+      "username": "dmehra2102",
+      "password": "$2b$10$YdB3prT7EjOiPpSo8Qox.OhBYi0F6ocEw3lET77VZeN97FYeZ6KVq",
+      "email": "deepanshumehra2102@gmail.com",
+      "firstname": "Deepanshu",
+      "lastname": "Mehra",
+      "avatar": "https://i.imgur.com/9xEcfJj.png",
+      "createdAt": 1670638319356,
+      "id": 1
+    },
+    {
+      "username": "sakshi0607",
+      "password": "$2b$10$W9kjXpMc/6Nd3b3bz.e0We0brKpgrg6SbhBBUECP0vK9PAOpoF5vS",
+      "email": "banichoudhary0704@gmail.com",
+      "firstname": "banichoudhary0704@gmail.com",
+      "lastname": "banichoudhary0704@gmail.com",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/762.jpg",
+      "createdAt": 1670698106132,
+      "id": 2
+    },
+    {
+      "username": "sakshi0607",
+      "password": "$2b$10$5vDf2jLBhkxkUPu8osikXezcK8AieaDoqtq6iNrYg/Cd8.YfyLeyy",
+      "email": "banichoudhary0704@gmail.com",
+      "firstname": "banichoudhary0704@gmail.com",
+      "lastname": "banichoudhary0704@gmail.com",
+      "avatar": "https://image.png",
+      "createdAt": 1670698120911,
+      "id": 3
+    },
+    {
+      "username": "annu8800",
+      "password": "$2b$10$Mrc2qhmsnqLW2jmi9nAMG.5LXb8.zQDLl7ZYA6R5LtToBsomACr2u",
+      "email": "banichoudhary0704@gmail.com",
+      "firstname": "banichoudhary0704@gmail.com",
+      "lastname": "banichoudhary0704@gmail.com",
+      "avatar": "https://image.png",
+      "createdAt": 1670698475174,
+      "id": 4
+    },
+    {
+      "username": "sakshi06070088",
+      "password": "$2b$10$9BBUqUXVbyMk74.IDFU4aud8sIQrSrhBJLp3X5ik5d4B2sDMNoISu",
+      "email": "banichoudhary0704@gmail.com",
+      "firstname": "banichoudhary0704@gmail.com",
+      "lastname": "banichoudhary0704@gmail.com",
+      "avatar": "https://image.png",
+      "createdAt": 1670741344069,
+      "id": 5
+    },
+    {
+      "username": "sakshi0607",
+      "firstname": "banichoudhary0704@gmail.com",
+      "lastname": "banichoudhary0704@gmail.com",
+      "email": "banichoudhary0704@gmail.com",
+      "password": "12345",
+      "avatar": "https://image.png",
+      "id": 6
+    },
+    {
+      "username": "annu12345",
+      "firstname": "annu",
+      "lastname": "singh",
+      "email": "banichoudhary0704@gmail.com",
+      "password": "12345",
+      "avatar": "https://image.png",
+      "id": 7
+    }
+  ],
+  "todos": [
+    {
+      "title": "fucdfafddfsad",
+      "completed": false,
+      "createdAt": 1670758570202,
+      "id": "GTohuJglWI",
+      "userId": 4
+    },
+    {
+      "title": "englishdfsarfadfsfdaf",
+      "completed": true,
+      "createdAt": 1670758570411,
+      "id": "j2x30IMsee",
+      "userId": 4
+    },
+    {
+      "title": "javadfaerfweadfsfdsaf",
+      "completed": true,
+      "createdAt": 1670760290414,
+      "id": "CodklLRxMj",
+      "userId": 4
+    },
+    {
+      "title": "Python",
+      "completed": true,
+      "createdAt": 1670760346926,
+      "id": "FwxmQuxUrw",
+      "userId": 4
+    },
+    {
+      "title": "english",
+      "completed": false,
+      "createdAt": 1670760356335,
+      "id": "Trrc1JHRKU",
+      "userId": 4
+    },
+    {
+      "title": "get_java",
+      "completed": true,
+      "createdAt": 1670760371534,
+      "id": "OphYTHdbPJ",
+      "userId": 4
+    },
+    {
+      "title": "english",
+      "completed": true,
+      "createdAt": 1670760384734,
+      "id": "HvhZ1WRdXT",
+      "userId": 4
+    },
+    {
+      "title": "get_java",
+      "completed": false,
+      "createdAt": 1670760476024,
+      "id": "FemDPgwcaJ",
+      "userId": 4
+    },
+    {
+      "title": "c++",
+      "completed": false,
+      "createdAt": 1670760491086,
+      "id": "5KASPfGPIG",
+      "userId": 4
+    },
+    {
+      "title": "java",
+      "completed": true,
+      "createdAt": 1670763839686,
+      "id": "XoXaUaQxyh",
+      "userId": 4
+    }
+  ],
+  "product":[
+    {
+      "createdAt": "2022-12-13T11:20:23.130Z",
+      "productName": "Handmade Rubber Gloves",
+      "avatar": "https://loremflickr.com/640/480/fashion",
+      "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+      "price": "201.00",
+      "id": "1"
+    },
+    {
+      "createdAt": "2022-12-13T04:39:31.907Z",
+      "productName": "Licensed Cotton Fish",
+      "avatar": "https://loremflickr.com/640/480/fashion",
+      "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
+      "price": "157.00",
+      "id": "2"
+    },
+    {
+      "createdAt": "2022-12-13T03:21:07.091Z",
+      "productName": "Luxurious Soft Sausages",
+      "avatar": "https://loremflickr.com/640/480/fashion",
+      "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+      "price": "999.00",
+      "id": "3"
+    },
+    {
+      "createdAt": "2022-12-12T23:50:36.058Z",
+      "productName": "Ergonomic Soft Chips",
+      "avatar": "https://loremflickr.com/640/480/fashion",
+      "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
+      "price": "631.00",
+      "id": "4"
+    },
+    {
+      "createdAt": "2022-12-13T01:29:01.846Z",
+      "productName": "Gorgeous Wooden Chips",
+      "avatar": "https://loremflickr.com/640/480/fashion",
+      "description": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
+      "price": "741.00",
+      "id": "5"
+    },
+    {
+      "createdAt": "2022-12-13T05:34:41.524Z",
+      "productName": "Unbranded Granite Chair",
+      "avatar": "https://loremflickr.com/640/480/fashion",
+      "description": "The Football Is Good For Training And Recreational Purposes",
+      "price": "969.00",
+      "id": "6"
+    },
+    {
+      "createdAt": "2022-12-13T02:19:34.388Z",
+      "productName": "Practical Steel Shirt",
+      "avatar": "https://loremflickr.com/640/480/fashion",
+      "description": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
+      "price": "811.00",
+      "id": "7"
+    },
+    {
+      "createdAt": "2022-12-13T07:31:56.934Z",
+      "productName": "Tasty Plastic Bacon",
+      "avatar": "https://loremflickr.com/640/480/fashion",
+      "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
+      "price": "40.00",
+      "id": "8"
+    },
+    {
+      "createdAt": "2022-12-13T12:14:33.807Z",
+      "productName": "Fantastic Frozen Pants",
+      "avatar": "https://loremflickr.com/640/480/fashion",
+      "description": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
+      "price": "208.00",
+      "id": "9"
+    },
+    {
+      "createdAt": "2022-12-13T07:33:52.265Z",
+      "productName": "Handmade Plastic Bacon",
+      "avatar": "https://loremflickr.com/640/480/fashion",
+      "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
+      "price": "318.00",
+      "id": "10"
+    },
+    {
+      "createdAt": "2022-12-12T14:50:01.989Z",
+      "productName": "Rustic Metal Chair",
+      "avatar": "https://loremflickr.com/640/480/fashion",
+      "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+      "price": "600.00",
+      "id": "11"
+    },
+    {
+      "createdAt": "2022-12-13T10:07:50.318Z",
+      "productName": "Tasty Rubber Shoes",
+      "avatar": "https://loremflickr.com/640/480/fashion",
+      "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
+      "price": "88.00",
+      "id": "12"
+    },
+    {
+      "createdAt": "2022-12-12T22:02:36.595Z",
+      "productName": "Small Fresh Table",
+      "avatar": "https://loremflickr.com/640/480/fashion",
+      "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
+      "price": "751.00",
+      "id": "13"
+    },
+    {
+      "createdAt": "2022-12-13T05:17:02.905Z",
+      "productName": "Ergonomic Plastic Chair",
+      "avatar": "https://loremflickr.com/640/480/fashion",
+      "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
+      "price": "272.00",
+      "id": "14"
+    },
+    {
+      "createdAt": "2022-12-12T19:10:10.569Z",
+      "productName": "Luxurious Soft Pizza",
+      "avatar": "https://loremflickr.com/640/480/fashion",
+      "description": "The Football Is Good For Training And Recreational Purposes",
+      "price": "29.00",
+      "id": "15"
+    },
+    {
+      "createdAt": "2022-12-13T13:00:03.786Z",
+      "productName": "Generic Steel Tuna",
+      "avatar": "https://loremflickr.com/640/480/fashion",
+      "description": "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
+      "price": "362.00",
+      "id": "16"
+    },
+    {
+      "createdAt": "2022-12-12T22:49:14.750Z",
+      "productName": "Handcrafted Metal Shirt",
+      "avatar": "https://loremflickr.com/640/480/fashion",
+      "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
+      "price": "379.00",
+      "id": "17"
+    },
+    {
+      "createdAt": "2022-12-12T18:22:13.012Z",
+      "productName": "Awesome Granite Shoes",
+      "avatar": "https://loremflickr.com/640/480/fashion",
+      "description": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
+      "price": "836.00",
+      "id": "18"
+    },
+    {
+      "createdAt": "2022-12-12T17:02:08.153Z",
+      "productName": "Bespoke Metal Towels",
+      "avatar": "https://loremflickr.com/640/480/fashion",
+      "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "price": "80.00",
+      "id": "19"
+    },
+    {
+      "createdAt": "2022-12-12T19:52:17.826Z",
+      "productName": "Bespoke Concrete Shirt",
+      "avatar": "https://loremflickr.com/640/480/fashion",
+      "description": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
+      "price": "795.00",
+      "id": "20"
+    }
+  ]
+}

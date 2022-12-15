@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer_Care</title>
+    <style>
+        form{
+            width:40%;
+            margin: auto;
+        }
+        form>label,input,select{
+            display: block;
+        }
+        form>label{
+            font-size: 20px;
+        }
+        form>input,label,select{
+            width:80%;
+            padding: 10px ;
+            font-weight: bolder;
+        }
+        select{
+            width: 83%;
+        }
+        select+p+label+input{
+            padding: 58px 0;
+            width: 83%;
+        }
+        #submit{
+            width:25%;
+            margin-top: 10px;
+            /* height: 10px; */
+            padding: -10px 10px;
+            background-color: #cafc4f;
+            border: 1px solid rgb(106, 104, 104);
+        }
+        #form{
+            padding: 70px  0;
+            border-top:1px solid black ;
+            border-bottom: 1px solid black ;
+        }
+        #header{
+            padding: 120px 0;
+            background-color: #f5f4f2;
+            text-align: center;
+            font-weight: lighter;
+
+        }
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>CONTACT US</h1>
+    </div>
+    <div id="form">
+        <form action="">
+            <label for="">Your email address</label>
+            <input type="email">
+            <label for="">Confirm Email</label>
+            <input type="email">
+            <label for="">First Name</label>
+            <input type="text">
+            <label for="">Subject</label>
+            <input type="text">
+            <label for="">Please choose a request type below</label>
+            <select name="" id="">
+                <option value=""></option>
+                <option value="">Account Deletion</option>
+                <option value="">Error on Lyst</option>
+                <option value="">General Feedback</option>
+                <option value="">General Feedback</option>
+                <option value="">Lyst Account Enquiry</option>
+                <option value="">Lyst Order Enquiry</option>
+                <option value="">Lyst Order Enquiry</option>
+                <option value="">Other</option>
+            </select>
+            <p></p>
+            <label for="">Description</label>
+            <input type="text">
+            <input id="submit" type="button" value="submit">
+        </form>
+    </div>
+    
+</body>
+</html>

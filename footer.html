@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer_Page</title>
+    <style>
+        #parent{
+            background-color: #f5f4f2;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            border-top: 1px black;
+            margin-top: 20px;
+            padding-top: 50px;
+            padding-bottom: 280px;
+            width: 100%;
+        }
+        #child_1{
+            width: 40%;
+            margin-top: -180px;
+            /* text-align: center; */
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* align-items: center; */
+            margin-left: 200px;
+
+        }
+        #child_2{
+            display: flex;
+            justify-content: space-evenly;
+            width:40%;
+            margin-left: -280px;
+        }
+        #child_2>div>a{
+            display: block;
+            text-decoration: none;
+            color: rgb(51, 46, 46);
+            margin-left: 5px;
+        }
+        #child_1>:nth-child(1)>img{
+            backface-visibility: hidden;
+            width: 18%;
+        }
+        #child_1>:nth-child(2){
+           width:26%;
+        }
+        #child_1>:nth-child(3)>p{
+          color:rgb(100, 99, 99);
+        }
+       
+        .pr{
+          color:black;
+          font-weight: bold;
+        }
+        #child_1>:nth-child(5)>:nth-child(1){
+          width:20%;
+        }
+        #child_1>:nth-child(5)>:nth-child(2){
+          width:23%;
+          margin-left: 12px;
+        }
+        #child_1>:nth-child(6){
+          margin:25px 0;
+        }
+        #child_1>:nth-child(4){
+          margin-bottom:15px;
+        }
+        h3{
+            font-weight:light;
+            color: rgb(32, 30, 30);
+        }
+        #child_2>:nth-child(1){
+            padding-left: -50px;
+
+        }
+        #child_2>div>a{
+            font-size: 16px;
+            margin-top: 8px;
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="child_1">
+            <div>
+                <img src="https://cdn.trustpilot.net/brand-assets/1.1.0/logo-white.svg" alt="">
+                <!-- <h1>TrustPilot</h1> -->
+            </div>
+            <div>
+                <img src="https://cdn.trustpilot.net/brand-assets/4.1.0/stars/stars-4.5.svg" alt="">
+            </div>
+            <div>
+                <p>TrustScore &nbsp;<span class="pr">4.4</span><br><span class="pr">2,954</span>&nbsp;&nbsp;reviews</p>
+
+            </div>
+            <div>
+                <img src="./images/icons8-facebook-f-30.png" alt="">
+                <img src="./images/icons8-instagram-24.png" alt="">
+            </div>
+            <div>
+                <img  src="https://www.rdsdelivery.com/wp-content/uploads/2016/11/apple-app-store-icon-300x104.png.webp" alt="">
+                <img onClick="playstoreLink()"src="https://images.squarespace-cdn.com/content/v1/57923378ebbd1a9829570952/1550736662154-RCDC50WSXTAGPGE59P0T/6a248cbe42c32b17de10b5cc8e9c0f69.png?format=300w" alt="">
+            </div>
+            <div>
+                Learn about the Lyst app for iPhone, iPad and Android.
+            </div>
+            <div>© 2022 Lyst</div>
+            
+        </div>
+        <div id="child_2">
+            <div>
+                <h3>INTERNATIONAL</h3>
+                <a href="">Lyst - CA</a>
+                <a href="">Lyst - UK</a>
+                <a href="">Lyst - US</a>
+                <a href="">Lyst - Österreich</a>
+                <a href="">Lyst - Schweiz</a>
+                <a href="">Lyst - Deutschland</a>
+                <a href="">Lyst - España</a>
+                <a href="">Lyst - France</a>
+                <a href="">Lyst - Italia</a>
+                <a href="">Lyst - 日本</a>
+                <a href="">Lyst - België</a>
+                <a href="">Lyst - Nederland</a>
+            </div>
+            <div>
+                <h3>HELP AND INFO</h3>
+                <a href="">Help centre</a>
+                <a href="">About us</a>
+                <a href="">Shipping policy</a>
+                <a href="">Returns policy</a>
+                <a href=""> Payments</a>
+                <a href="">Refund policy</a>
+                <a href="">Developers</a>
+                <a href="">Careers</a>
+                <a href="">Contact</a>
+                <a href="">Terms & conditions</a>
+                <a href="">Privacy & cookie policy</a>
+                <a href="">Intellectual property</a>
+                <a href="">Categories</a>
+                <a href="">Become a partner</a>
+                <a href="">Lyst Insights</a>
+                <a href="">Lyst News</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+<script>
+    function playstoreLink(){
+        window.location.href="https://play.google.com/store/search?q=lyst%20app&c=apps"
+        console.log("object");
+    }
+</script>
