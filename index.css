@@ -26,14 +26,28 @@
 #navTop>div{
  padding-left: 50px;
 }
+#navTop>div>a{
+  text-decoration: none;
+  color: black;
+}
 #navBottom{
 display: flex;
 align-items: center;
 justify-content: space-evenly;
 margin-top: 20px;
 }
+.link{
+  background: none;
+  text-decoration: none;
+  color: black;
+  border: none;
+  font-size: inherit;
+  cursor: pointer;
+  padding: 0;
+
+}
 .box{
- width: 1300px;
+ width: 1000px;
  height: 50px;
  background-color: white;
  border: 1px solid black;
@@ -57,8 +71,12 @@ padding: 20px;
 .wish-alert{
  font-size: 20px;
 }
-.wish-alert>i:hover{
+.wish-alert>a>i:hover{
 color: red;
+}
+.wish-alert>a{
+  text-decoration: none;
+  color: black;
 }
 .sub-help{
  display: none;
