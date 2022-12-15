@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+</head>
+<style>
+    #productsCard{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+    #cards{
+       
+        /* justify-content: ; */
+        border: 1px solid rgb(143, 140, 140);
+        width: auto;
+    }
+    #cardsFlex{
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+</style>
+<body>
+    <div>
+        <select name="" onchange="sorting()" id="sort">
+            <option value="" id="rec">Recomendation</option>
+            <option value="asc" id="asc">SortLowToHigh</option>
+            <option value="desc" id="desc">SortHighToLow</option>
+        </select>
+    </div>
+    <div id="productsCard"></div>
+
+    <div id="pagination-wrapper"></div>
+
+    
+    
+</body>
+</html>
+<script>
+    let url="http://localhost:3000/product"
+    let data=[]
+
+
+    async function production(id){
+        try {
+            let response=await fetch(`http://localhost:3000/product/?limit=10&_page=${id}`);
+            if(response.ok){
+            let ans=await response.json();
+            // console.log(ans.length);
+            data=ans
+            display(ans)
+            
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    production()
+
+
+    function display(data){
+      let result=  data.map((item)=>{
+            return`
+            <div id="cards">
+                <img src=${item.image} alt="">
+                <div id="cardsFlex">
+                    <div id="childOne">
+                         <h2>${item.brands}</h2>
+                         <p>${item.Product_name}</p>
+                         <h2>${item.price}</h2>
+                         <div id="sub_child">
+                                <i class="fa-sharp fa-solid fa-link"></i>
+                                  <p>${item.description}</p>
+                          </div>
+                    </div>
+                    <div id="childTwo">
+                           <i id="wishlist" data-id=${item.id} class="fa-regular fa-heart fa-3x"></i>
+                           <button id="add" data-id=${item.id}>Add TO cart</button>
+                    </div>
+                </div>
+             </div>
+     `
+        });
+        document.querySelector("#productsCard").innerHTML=result.join(" ")
+        let btn=document.querySelectorAll("#add");
+        for(let addCardBtn of btn){
+            addCardBtn.addEventListener("click",function(e){
+                card_data(e.target.dataset.id);
+                // console.log(e.t);
+        })
+        };
+        let wishlist=document.querySelectorAll("#wishlist");
+        for(let wishlistAdd of wishlist){
+            wishlistAdd.addEventListener("click",function(event){
+                wishlist_data(event.target.dataset.id)
+            })
+        }
+       
+
+    }
+    async function card_data(id){
+        try {
+            let response=await fetch(`http://localhost:3000/product/${id}`);
+            if(response.ok){
+                let result=await response.json();
+                addCardPageData(result.length);
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
+    async function addCardPageData(data){
+        try {
+            let response=await fetch("http://localhost:3000/cart",{
+                method:"POST",
+                headers:{
+                    "Content-Type":"application/json"
+                },
+                body:JSON.stringify(data)
+            })
+            if(response.ok){
+               let result=await response;
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    async function wishlist_data(id){
+        try {
+            let response=await fetch(`http://localhost:3000/product/${id}`);
+            if(response.ok){
+                let result=await response.json();
+                wishlistPageData(result)
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    };
+    async function wishlistPageData(data){
+        try {
+            let response=await fetch(`http://localhost:3000/wishlist`,{
+                method:"POST",
+                headers:{
+                    "Content-Type":"application/json"
+                },
+                body:JSON.stringify(data)
+            });
+            if(response.ok){
+                let result=await response.json();
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
+
+   async function PaginationCount(){
+    try {
+            let response=await fetch("http://localhost:3000/product");
+            if(response.ok){
+            let ans=await response.json();
+            // console.log(ans.length);
+            renderingPagination(ans.length)
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    let id;
+    PaginationCount()
+    function renderingPagination(total){
+        let total_count=Math.ceil(total/10);
+        function btnList(){
+            let arr=[]
+            for(let i=1;i<=total_count;i++){
+            arr.push(paginationButton(i,'pagination-btn',i))
+        }
+        return arr.join(" ")
+        }
+        document.querySelector("#pagination-wrapper").innerHTML=btnList()
+        let btn=document.querySelectorAll(".pagination-btn");
+        for(let paginationBtnList of btn){
+            paginationBtnList.addEventListener("click",function(event){
+                 id=event.target.dataset.id;
+                production(id)
+                sortLowtoHigh(id)
+            })
+        }
+        
+    }
+
+    function paginationButton(dataid,cls,text){
+        return`
+        <button class="${cls}" data-id=${dataid}>${text}</button>
+        `
+    }
+   
+function sorting(data){
+    let sort=document.querySelector("#sort");
+       if(sort.value=="asc"){
+        data.sort((a,b)=> b.price-a.price)
+        console.log("object");
+
+       }
+       if(sort.value=="desc"){
+        // data.sort((a,b)=> a.price-b.price)
+        sortHightoLow(id)
+       }
+    //    console.log(data);
+}
+    sorting(data)
+ 
+
+  function sortLowtoHigh(){
+       
+    }
+    async  function sortHightoLow(id){
+        try {
+            let response=await fetch(`http://localhost:3000/product?_sort=price&_order=desc`);
+            let res=await response.json();
+            display(res)
+            console.log(res);
+        } catch (error) {
+            
+        }
+    }
+</script>
