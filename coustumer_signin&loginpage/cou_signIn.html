@@ -5,26 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up or Log In</title>
-    <link rel="stylesheet" href="/coustumer_signin&loginpage\cou_signIn.css">
+    <link rel="stylesheet" href="./cou_signIn.css">
 </head>
 <body>
     <div class="p_container">
-        <div class="SignIn_page">
-        </form>
+        <div id="signin_page">
+        <form>
             <h1>The only fashion site you need</h1>
             <p>
                 <label>Email</label>
-                <input type="email", placeholder="mysuperusername690" required="required"/>
+                <input id="email" type="email", placeholder="mysuperusername690" required="required"/>
             </p>
             <p>
                 <label>Password</label>
-                <input type="password", placeholder="Enter you password" required="required"/>
+                <input id="password" type="password", placeholder="Enter you password" required="required"/>
             </p>
                 <p class="login button">
-                <input id="button"type="submit", value="Sign In"/>
+                <input id="button" type="submit", value="Sign In"/>
             </p>
             <p>-------------------------------OR---------------------------</p>
-            <p>Doesn't have a account ? <a id="sign_up_link" href="/coustumer_signin&loginpage\cou_signUp.html">Sign Up</a></p>
+            <p>Doesn't have a account ? <a id="sign_up_link" href="./cou_signUp.html">Sign Up</a></p>
         </form>
         </div>
         <div>
@@ -39,3 +39,4 @@
     </div>
 </body>
 </html>
+<script src="./con_signIn.js"></script>

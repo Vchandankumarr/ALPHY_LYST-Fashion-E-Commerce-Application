@@ -8,7 +8,7 @@ body{
     align-items: center;
 }
 
-.SignIn_page{
+#signin_page{
     width:40%;
     margin: 2%;
     margin-top:10%;
@@ -16,18 +16,18 @@ body{
    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
    
 }
-.SignIn_page:hover{
+#signin_page:hover{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.SignIn_page label{
+#signin_page label{
     display:block;
     padding-bottom:2%;
     text-align: start;
     font-size: 20px;
 }
 
-.SignIn_page input{
+#signin_page input{
     display:block;
     padding:3%;
     width:91%;
