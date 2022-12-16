@@ -1,0 +1,70 @@
+body{
+  text-align: center;
+  font-size: 17px;
+}
+
+#admin_login{
+  width:30%;
+  height:40%;
+  margin: 3% 35%;
+ padding:2%;
+ box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+#admin_login:hover{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+#admin_login label{
+  margin-left:4%;
+  display:block;
+  padding-bottom:2%;
+  text-align: start;
+  font-size: 20px;
+}
+
+#admin_login input{
+  padding:3%;
+  width:85%;
+  font-size:100%;
+}
+
+.button{
+  width:140%;
+  font-size:30px;
+  font-weight: bolder;
+  border-radius:10%;
+  background-color: #ebeeef;
+  border:none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 8px;
+}
+
+.button:hover{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 8px;
+  background-color:#cacdce;
+}
+
+#sign_In_link{
+  text-decoration: none;
+  font-weight: bolder;
+}
+a{
+  text-decoration: none;
+}
+
+p{
+  margin:5% 0%;
+}
+.text{
+  text-align: start;
+}
+
+
+
+
+
+
+
+
+
+
+
