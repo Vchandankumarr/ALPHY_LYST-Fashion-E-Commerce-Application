@@ -1,62 +1,9 @@
 console.log("cart page")
 
 
-products=[
-    {
-        createdAt: "2022-12-12T19:52:17.826Z",
-        productName: "Bespoke Concrete Shirt",
-        avatar: "https://loremflickr.com/640/480/fashion",
-        description: "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
-        price: "795.00",
-        id: "20"
-      },
-      {
-        createdAt: "2022-12-12T19:52:17.826Z",
-        productName: "Bespoke Concrete Shirt",
-        avatar: "https://loremflickr.com/640/480/fashion",
-        description: "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
-        price: "795.00",
-        id: "20"
-      },
-      {
-        createdAt: "2022-12-12T19:52:17.826Z",
-        productName: "Bespoke Concrete Shirt",
-        avatar: "https://loremflickr.com/640/480/fashion",
-        description: "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
-        price: "795.00",
-        id: "20"
-      },
-      {
-        createdAt: "2022-12-12T19:52:17.826Z",
-        productName: "Bespoke Concrete Shirt",
-        avatar: "https://loremflickr.com/640/480/fashion",
-        description: "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
-        price: "795.00",
-        id: "20"
-      },
-      {
-        createdAt: "2022-12-12T19:52:17.826Z",
-        productName: "Bespoke Concrete Shirt",
-        avatar: "https://loremflickr.com/640/480/fashion",
-        description: "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
-        price: "795.00",
-        id: "20"
-      }
-]
-console.log(products.length)
-// totalproduct.innerHTML=products.length
-append(products)
-// 
 
-// {
-//     createdAt: "2022-12-12T19:52:17.826Z",
-//     productName: "Bespoke Concrete Shirt",
-//     avatar: "https://loremflickr.com/640/480/fashion",
-//     description: "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
-//     price: "795.00",
-//     id: "20"
-//   },
 
+let a=1;
 
 let totalproduct=document.getElementById("totalproduct")
 let totalprice=document.getElementById("Price")
@@ -64,7 +11,7 @@ let totaldiscount=document.getElementById("totalDiscount")
 let totalbill=document.getElementById("TotalPric")
 let totalDeliverycharges=document.getElementById("totalDeliverycharges")
 // let totlprice;
-totalproduct.innerHTML=products.length
+// totalproduct.innerHTML=products.length
 async function cart()
 {
   try {
@@ -72,28 +19,40 @@ async function cart()
     let data=await res.json()
     console.log(data)
     totalproduct.innerHTML=data.length
-    append (data)
-  } catch (error) {
+    append(data)
+  
+
+    // 
+    const producttotal = data.reduce(
+      (accumulator, el) => (+accumulator) + (+el.price),0
+      // initialValue
+    );
+    // console.log(sumWithInitial)
+    // 
+totalprice.innerHTML="₹"+producttotal
+// expected output: 10
+totaldisc(producttotal)
+  } 
+  catch (error) {
     
   }
 }
 cart()
-// cart().then(data=>console.log(data))
-
-// to calculate total ammount
-// const array1 = [1, 2, 3, 4];
+const array1 = [1, 2, 3, 4];
 
 // 0 + 1 + 2 + 3 + 4
-const initialValue = 0;
-const producttotal = products.reduce(
-  (accumulator, el) => accumulator + (+el.price),
-  initialValue
+// const initialValue = 0;
+const sumWithInitial = array1.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,0
+  // initialValue
 );
 
-console.log(typeof producttotal);
-totalprice.innerHTML="₹"+producttotal
+console.log(sumWithInitial);
 // expected output: 10
-totaldisc(producttotal)
+
+
+
+
 
 function totaldisc(procuctdisc)
 {
@@ -105,15 +64,15 @@ function totaldisc(procuctdisc)
     totalDeliverycharges.innerHTML="₹"+0
   }
   else{
-    totaldiscount.innerHTML=0
+    totaldiscount.innerHTML=0+"%"
     totalDeliverycharges.innerHTML="₹"+500
      let totl= procuctdisc+500
-     totalbill.innerHTML=totl
+     totalbill.innerHTML="₹"+totl
   }
 }
 
 
-function append (data) {
+function append(data) {
 
     let container = document.getElementById("productcontainer");
     container.innerHTML = null;
@@ -129,25 +88,67 @@ function append (data) {
     image.setAttribute("class","image")
     image.src=element.image
 
+    let price=document.createElement("p")
+    price.innerHTML="₹"+element.price
+    let productprice=price
+
+//  adding increment and decrement 
+
+
+        let incrementbtn=document.createElement("div")
+        incrementbtn.setAttribute("class", "wrapper")
+        
+
+        
+
+        let totalnumber=document.createElement("span")
+        totalnumber.setAttribute("class", "totalnumber")
+        totalnumber.innerHTML=a
+
+        let decrementspan=document.createElement("button")
+        decrementspan.setAttribute("class", "decrement")
+        decrementspan.innerHTML="-";
+        
+        decrementspan.addEventListener("click",()=>{
+          Decrement(totalnumber,productprice,element.price)
+        } )
+
+        let incrementspan=document.createElement("button")
+        incrementspan.setAttribute("class", "increment")
+        incrementspan.innerHTML="+"
+       
+        incrementspan.addEventListener("click", ()=>
+        {
+          Increment(totalnumber,productprice,element.price)
+        })
+        
+       
+
+        
+
+// 
     let name=document.createElement("h4")
     name.innerHTML=element.Product_name
 
     let color=document.createElement("p")
     color.innerHTML="white"
 
-    let price=document.createElement("p")
-    price.innerHTML="₹"+element.price
+    
     
     let addtowishlist=document.createElement("button")
     addtowishlist.setAttribute("class","button")
     addtowishlist.innerHTML="add to wishlis";
-    addtowishlist.addEventListener("click",Addtowishlist)
+    addtowishlist.addEventListener("click",()=>{
+      Addtowishlist(element.id)
+    })
 
     let removeproduct=document.createElement("button")
     removeproduct.setAttribute("class","remove")
     removeproduct.innerHTML="remove";
    
-    removeproduct.addEventListener("click",RemoveProduct)
+    removeproduct.addEventListener("click",()=>{
+      deleteProduct(element.id)
+    })
 
     let description=document.createElement("p")
     description.innerHTML=element.description
@@ -160,7 +161,9 @@ function append (data) {
       payment()
     }
 
-    lcontainer.append(image)
+    incrementbtn.append(decrementspan,totalnumber,incrementspan)
+
+    lcontainer.append(image,incrementbtn)
 
     Rcontainer.append(name,color,price,addtowishlist,description,removeproduct,description,placeOrder)
     pcontainer.append(lcontainer,Rcontainer)
@@ -170,25 +173,90 @@ function append (data) {
 
 }
 
+function Decrement(dec,productprice,price)
+{
+  console.log("-")
+  if(a>1)
+  {
+    a--;
+    // totalnumber.innerHTML=a
+    dec.innerHTML=a
+    productprice.innerHTML="₹"+price*a
+    
+    console.log(typeof a)
+
+
+  }
+}
+
+function Increment(inc,productprice,price)
+{
+  console.log(price)
+    console.log("+")
+    a++
+    let b=1
+    inc.innerHTML=a
+    productprice.innerHTML="₹"+price*a;
+    
+
+}
 
 function payment()
 {
   window.open("./paymentPage.html", "_self")
 }
 
-function Addtowishlist()
+async function Addtowishlist(id)
 {
   console.log("whistlist")
+  console.log(id)
+  try {
+    let res=await fetch(`https://639aeab431877e43d67b3d7d.mockapi.io/wishlists/${id}`)
+    let data=await res.json()
+    console.log(data)
+    addproducttowishlist(data)
+  } catch (error) {
+    
+  }
+
+}
+async function addproducttowishlist(data){
+  try {
+    let res= await fetch(`https://639aeab431877e43d67b3d7d.mockapi.io/wishlists`,{
+      method:"POST",
+      headers:{
+        "content-Type":"application/json"
+      },
+      body:JSON.stringify(data)
+    });
+    // console.log(res.ok)
+    if(res.ok)
+    {
+      let result=await res.json()
+      console.log(result)
+    }
+  } catch (error) {
+    
+  }
 }
 
-async function RemoveProduct()
-{
-  console.log("remove product")
-  let res=await fetch("https://639aeab431877e43d67b3d7d.mockapi.io/carts",{
-    method:'DELETE',
-    headers: {
-      "Content-Type" : "application/json",
-  },
-  body: JSON.stringify(obj),
-  })
+
+
+ async function deleteProduct(id){
+  console.log("remove")
+  console.log(id)
+  try {
+    let res=await fetch(`https://639aeab431877e43d67b3d7d.mockapi.io/carts/${id}`,{
+      method: 'DELETE'
+    })
+    console.log(res)
+    let data=await res.json()
+    console.log(data)
+    cart()
+  } catch (error) {
+    
+  }
 }
+
+
+
