@@ -1,0 +1,206 @@
+*{
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;/* overflow: hidden; */
+}
+#navBar{
+  border-bottom: 1px solid black;
+  position: sticky;
+  top: 0px;
+  height: auto;
+  background-color: white;
+  padding-bottom: 10px;
+  z-index: 3;
+}
+
+#navTop{
+ display: flex;
+ /* flex-wrap:wrap; */
+ /* align-items:center; */
+ justify-content:end;
+ /* border: 1px solid black; */
+ padding-top: 10px;
+ padding-right: 10px;
+ padding-left: 10px;
+ padding-bottom: 10px;
+}
+#navTop>div{
+ padding-left: 50px;
+}
+#navTop>div>a{
+  text-decoration: none;
+  color: black;
+}
+#navBottom{
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+margin-top: 20px;
+}
+
+.box{
+ width: 1000px;
+ height: 50px;
+ background-color: white;
+ border: 1px solid black;
+ display: flex;
+align-items: center;
+padding: 20px;
+}
+.box>i{
+ font-size: 20px;
+ color: #777;
+ 
+}
+.box>input{
+ flex: 1;
+ height: 40px;
+ border: none;
+ outline: none;
+ font-size: 15px;
+ 
+}
+.wish-alert{
+ font-size: 20px;
+}
+.wish-alert>a>i:hover{
+color: red;
+}
+.wish-alert>a{
+  text-decoration: none;
+  color: black;
+}
+.sub-help{
+ display: none;
+}
+.help-signin-account:hover .sub-help{
+ display: block;
+ position: absolute;
+ background-color: white;
+ /* margin-top: 15px; */
+ margin-left: -35px;
+ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.help-signin-account:hover .sub-help{
+ display: block;
+ 
+ list-style: none;
+ padding:15px;
+ 
+ 
+}
+.help-signin-account:hover .sub-help li a{
+
+display: flex;
+color: black;
+padding-top: 10px;
+padding-bottom: 20px;
+text-decoration: none;
+
+}
+
+.help-signin-account:hover .sub-help li {
+ width: 150px;
+ border-bottom: 1px solid black;
+}
+.help-signin-account:hover .sub-account li:last-child{
+  border-bottom: none;
+}
+.help-signin-account:hover .sub-help li a:hover{
+ text-decoration: underline;
+}
+.help-signin-account:hover .sub-account{
+ margin-left: -125px;
+ box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.sub-account>li:last-child{
+text-align: center;
+}
+.sub-account>li>button{
+ margin-top: 20px;
+ height: 40px;
+ width: 80%;
+ background-color: #f2f2f2;
+ border: none;
+}
+
+/* START dropdown for WOMEN and MEN */
+.link{
+  background: none;
+  text-decoration: none;
+  color: #777;
+  border: none;
+  font-size: inherit;
+  cursor: pointer;
+  padding: 0;
+
+}
+.dropdown.active>.link,.link:hover{
+  color:black;
+}
+.dropdown{
+  position: relative;
+
+}
+.drop-down-Menu{
+  position: absolute;
+  margin-left: -320px;
+  top: calc(100% + 1.70rem);
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 1px 0px 0px;
+  /* width: 1200px; */
+ padding: 1.2REM;
+ opacity: 0;
+ transform: translateY(-10px);
+ transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
+}
+.dropdown.active >.link + .drop-down-Menu{
+  opacity: 1;
+  transform: translateY(0);
+}
+/* .information-grid{
+ 
+} */
+.drop-down-links{
+ display: none;
+/*  width: 1000px ; */
+}
+
+
+.drop-down-heading:hover .drop-down-links{
+  /* border-bottom:1px solid black ; */
+   display:flex;
+   flex-direction: column;
+   
+}
+
+.dropMenu-box{
+ width: auto;
+  display: grid;
+  grid-template-columns: repeat(8,9.8vw);
+  gap: 3.35rem;
+ /* border: 1px solid red; */
+ background-color: white;
+ /* text-align: center; */
+}
+.drop-down-heading{
+/* border-right: 1px solid black; */
+height: auto;
+
+}
+/* .drop-down-heading-women:hover .drop-down-links>.link{
+
+} */
+.drop-down-heading:hover .drop-down-links>.link{
+ padding-top: 10px;
+ padding-bottom: 10px;
+ 
+}
+.dropdown>button{
+ padding-right: 10px;
+ padding-left: 10px;
+}
+
+.drop-down-heading:hover .drop-down-links>.link:hover{
+text-decoration: underline;
+}
