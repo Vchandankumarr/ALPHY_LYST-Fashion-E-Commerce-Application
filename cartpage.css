@@ -84,3 +84,113 @@
     width: 100%;
     /* height:100% */
 }
+
+/* ************************************************************************************ */
+body{
+    background-color: #f1f3f6
+}
+#cartcontainer{
+    display:flex;
+    /* border:1px solid red; */
+    height:auto;
+    justify-content: center;
+    gap: 20px;
+    /* background-color:white */
+}
+
+
+#productcontainer{
+    /* border:1px solid blue; */
+    width:60%;
+    height:auto;
+
+}
+
+#detailscontainer{
+    /* border:1px solid blue; */
+    width:35%;
+    height:400px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.pcontainer{
+    /* border:1px solid red; */
+    display:flex;
+    gap:20px;
+    margin:20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+.pcontainer>div{
+    width:50%;
+    border:1px solid black;
+    padding: 10px;
+   
+}
+
+.image{
+    width:100%;
+    /* border:1px solid */
+}
+.button{
+    border:none;
+    background-color: transparent;
+    margin:20px;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    /* background-color: #ff6600; */
+    padding: 10px;
+}
+.button:hover{
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.remove{
+    border:none;
+    background-color: transparent;
+    margin:20px;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    /* background-color: #ff6600; */
+    padding: 10px;
+}
+.remove:hover{
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.placeorder{
+    border:none;
+    background-color: transparent;
+    /* display:flex */
+    /* position:absolute; */
+    float:right;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: #ff6600;
+    padding: 10px;
+}
+
+.placeorder:hover{
+    background-color: red;
+    color:black;
+    cursor:pointer;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+#cartcontainer>#detailscontainer{
+    /* position:fixed; */
+    float: right;
+    /* padding-left: 100px; */
+    position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+.details_container_div{
+    display: flex;
+    padding: 20px;
+    justify-content:space-between
+}
