@@ -69,76 +69,22 @@
       "id": 7
     }
   ],
-  "todos": [
+  "CustomerQueries": [
     {
-      "title": "fucdfafddfsad",
-      "completed": false,
-      "createdAt": 1670758570202,
-      "id": "GTohuJglWI",
-      "userId": 4
+      "email": "saifjava2@gmail.com",
+      "name": "mohd Yunus",
+      "subject": "Lyst",
+      "select": "Error on Lyst",
+      "Description": "hey i am yunus",
+      "id": 1
     },
     {
-      "title": "englishdfsarfadfsfdaf",
-      "completed": true,
-      "createdAt": 1670758570411,
-      "id": "j2x30IMsee",
-      "userId": 4
-    },
-    {
-      "title": "javadfaerfweadfsfdsaf",
-      "completed": true,
-      "createdAt": 1670760290414,
-      "id": "CodklLRxMj",
-      "userId": 4
-    },
-    {
-      "title": "Python",
-      "completed": true,
-      "createdAt": 1670760346926,
-      "id": "FwxmQuxUrw",
-      "userId": 4
-    },
-    {
-      "title": "english",
-      "completed": false,
-      "createdAt": 1670760356335,
-      "id": "Trrc1JHRKU",
-      "userId": 4
-    },
-    {
-      "title": "get_java",
-      "completed": true,
-      "createdAt": 1670760371534,
-      "id": "OphYTHdbPJ",
-      "userId": 4
-    },
-    {
-      "title": "english",
-      "completed": true,
-      "createdAt": 1670760384734,
-      "id": "HvhZ1WRdXT",
-      "userId": 4
-    },
-    {
-      "title": "get_java",
-      "completed": false,
-      "createdAt": 1670760476024,
-      "id": "FemDPgwcaJ",
-      "userId": 4
-    },
-    {
-      "title": "c++",
-      "completed": false,
-      "createdAt": 1670760491086,
-      "id": "5KASPfGPIG",
-      "userId": 4
-    },
-    {
-      "title": "java",
-      "completed": true,
-      "createdAt": 1670763839686,
-      "id": "XoXaUaQxyh",
-      "userId": 4
+      "email": "fw22_0640@gmail.com",
+      "name": "Mohd. saif",
+      "subject": "Product",
+      "select": "General Feedback",
+      "Description": "hey i am saif",
+      "id": 2
     }
   ],
   "product": [

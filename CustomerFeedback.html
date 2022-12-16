@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CustomerFeedback</title>
+    <style>
+        #feedback{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+            height: auto;
+            gap: 15px;
+            margin:40px 0;
+        }
+        #feedback>div{
+            border:1px solid rgb(115, 112, 112);
+            padding: 20px;
+            background-color: #f5f3f2;
+        }
+    </style>
+</head>
+<body>
+    <div id="feedback">
+    </div>
+</body>
+</html>
+<script>
+    async function randerFeedback(){
+        try {
+            let response=await fetch("http://localhost:3000/CustomerQueries");
+            if(response.ok){
+                let result=await response.json();
+                display(result);
+            }
+        } catch (error) {
+           
+        }        
+    }
+    randerFeedback();
+    function display(data){
+        let allDiv=data.map((item)=>{
+            return `
+            <div id="card">
+                <h1> ${item.name}</h1>
+                <p>Email : ${item.email}</p>
+                <p>Type : ${item.select}</p>
+                <p>feedback : ${item.Description}</p>
+                </div>
+            `
+        });
+        document.querySelector("#feedback").innerHTML=allDiv.join(" ")
+    }
+</script>

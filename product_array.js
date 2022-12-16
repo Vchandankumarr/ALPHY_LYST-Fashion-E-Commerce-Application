@@ -1,3 +1,6 @@
+"https://639aeab431877e43d67b3d7d.mockapi.io/carts"
+"https://639aeab431877e43d67b3d7d.mockapi.io/wishlists"
+
 let arr=[
     {
         "image":"https://cdna.lystit.com/200/250/tr/photos/tessuti/d9eb3519/ugg-Brown-Tasman-Slippers.jpeg",
@@ -92,7 +95,7 @@ let arr=[
         "price":199,
         "description":"Tessuti UK",
         "id":11
-    },
+    }
     {
         "image":"https://cdna.lystit.com/200/250/tr/photos/tessuti/d9eb3519/ugg-Brown-Tasman-Slippers.jpeg",
         "Product_name":"Traveler Canvas Mini Tote Bag - Black",
