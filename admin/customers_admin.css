@@ -1,0 +1,70 @@
+body{
+    background-color: rgb(250, 250, 250);
+}
+
+#admin_desbord_navbar{
+    height:30px;
+    text-align: center;
+    font-size: 30px;
+    font-weight:bolder;
+    text-decoration: underline;
+    padding:2px;
+}
+
+#admin_desbord{
+    text-align: center;
+}
+#admin img{
+    width:10%;
+}
+
+#admin button{
+    padding:1%;
+    border:none;
+    font-size: larger;
+    font-weight: bolder;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+#admin button:hover{
+    cursor: pointer;
+}
+
+#admin a{
+    text-decoration: none;
+    color:rgb(42, 50, 165);
+}  
+
+#admin button:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#right-side table{
+    margin:auto;
+    padding:1%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; 
+}
+#right-side>tbody tr{
+    border-collapse:collapse;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; 
+}
+
+#right-side tr,td{
+   width:200px;
+   height:30px;
+}
+#right-side thead{
+    font-size: larger;
+    font-weight: bolder;
+}
+.remove{
+    color:brown;
+    text-decoration: underline;
+}
+.remove:hover{
+    cursor: pointer;
+}
+
+
+
+
