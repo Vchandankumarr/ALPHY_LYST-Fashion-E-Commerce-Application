@@ -61,7 +61,7 @@ body{
 }
 #submit{
     font-size:20px;
-    background-color: rgb(204, 218, 248);
+    background-color: rgb(233, 232, 232);
     border:none;
     border-radius: 15% 10%; 
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -70,6 +70,8 @@ body{
 }
 #submit:hover{
     cursor: pointer;
+    background-color: rgb(160, 159, 159);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 #admin button{
@@ -118,13 +120,12 @@ body{
     display:grid;
     grid-template-columns: repeat(2,1fr);
     /* border:2px solid black; */
-    width:auto;
+    /* width:auto; */
 }
 
 .child-product-div{
     display:flex;
-    justify-content:space-evenly;
-    
+    justify-content:space-evenly;  
 }
 
 .deleteButton{
@@ -152,3 +153,29 @@ body{
 #parent-product-div img{
     height:80%;
 }
+
+/* pagination - wrapper */
+.pagination-wrapper{
+    /* display:flex; */
+    width:100%;
+}
+.pagination-btn-list{
+    display:flex;
+    justify-content: center;
+    height: auto;
+}
+.pagination-wrapper button{
+    padding:1% 5%;
+    margin:2%;
+    border:none;
+    font-size:16px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-weight: bold;
+}
+
+.pagination-wrapper button:hover{
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color:rgb(158, 157, 157);
+}
+
