@@ -1,0 +1,51 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+#container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    /* border: 1px solid red; */
+    margin: auto;
+    /* justify-content: center; */
+    gap:20px;
+    width:98%
+}
+.card{
+    /* border:1px solid red; */
+    /* margin:auto */
+    padding: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.buttondiv{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content:space-between
+}
+
+.buttondiv button{
+    background-color: transparent;
+    cursor: pointer;
+    padding:7px;
+    border-radius: 10px;
+    border:1px solid rgb(85, 80, 80);
+}
+
+.buttondiv>button:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#total_product{
+    float: top;
+    /* padding-left: 100px; */
+    position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color:#777;
+  color:white;
+  font-size: 20px;
+  /* margin-left: 20px; */
+}

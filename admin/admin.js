@@ -1,29 +1,40 @@
 // let products_button = document.querySelector("#products_button");
 // products_button.addEventListener("click",fetchdata());
+let productBaseUrl = "https://639aeab431877e43d67b3d7d.mockapi.io/products";
 
-(async function fetchdata(){
+window.addEventListener("load", () => {
+    fetchdata();
+});
+
+async function fetchdata(page_number=1,data_limit_perpage=10){
     try {
-        let res = await fetch("https://639aeab431877e43d67b3d7d.mockapi.io/products",{
+        let res = await fetch(`${productBaseUrl}?page=${page_number}&limit=${data_limit_perpage}`,{
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
                }
             })
             if(res.ok){
+               //console.log(res);
+                // console.log(res.headers.gets("x-"))
                 let out = await res.json();
-                 display(out);
+                let total = out.length;
+                 document.querySelector(".total").innerHTML = `Total Products: ${total}`
+                //console.log(out);
+                let total_page_show = Math.ceil(+(56)/data_limit_perpage);
+               // console.log(total_page_show);
+                display(out);
+                renderPaginationButtons(total_page_show);
             }
         } catch (error) {
-          alert(error);
+         // alert(error);
         }
-})();
-
+};
 // console.log(main);
+
+let main = document.querySelector("#parent-product-div");
 function display(data){
-    let main = document.querySelector("#parent-product-div");
     main.innerHTML = "";
-    let total = data.length;
-    document.querySelector(".total").innerHTML = `Total Products: ${total}`
    main.innerHTML= data.map((elem)=>{
         return `
         <div class="child-product-div">
@@ -36,15 +47,117 @@ function display(data){
                         <p><b>Brands:</b> ${elem.brands}</p>
                         <p><b>Price:</b> ${elem.price}</p>
                         <p><b>Description:</b> ${elem.description}</p>
-                        <p><b>Id:</b> ${elem.id}</p>
+                        
                         <p><b>Item:</b> ${elem.type}</p>
                       </div>
                     <div class="deleteButton">
-                        <button>Delete</button>
-                        <button>Edit</button>
+                        <button class="delete" data-id=${elem.id}>Delete</button>
+                        <button class="edit" data-id=${elem.id}>Edit</button>
                     </div>
                   </div>
               </div>
         `
     }).join(" ");
-}
+
+    let deleteButton = document.querySelectorAll(".delete");
+    for(let key of deleteButton){
+        key.addEventListener("click",(event)=>{
+            let data_id = event.target.dataset.id;
+            deleteItem(data_id);
+        });
+    }; 
+};
+/*  <p><b>Id:</b> ${elem.id}</p>*/
+
+async function deleteItem(id){
+    try {
+        let res = await fetch(`${productBaseUrl}/${id}`,{
+            method : "DELETE",
+            headers : {
+                "Content-Type":"application/json",
+            },
+        });
+        if(res.ok){
+            fetchdata();
+            alert("Product has been deleted succussfully");
+        }
+    } catch (error) {
+      alert(error);
+    }
+};
+
+let Addform = document.querySelector("#addform form");
+Addform.addEventListener("submit",(event)=>{
+    event.preventDefault();
+    all_input = document.querySelectorAll("#addform input");
+    on_more_section = document.querySelector("#addform select");
+    // console.log(all_input);
+    // console.log(on_more_section);
+    let obj={};
+    for(let i=0;i<all_input.length-1;i++){
+      obj[all_input[i].id] = all_input[i].value;
+    }
+    obj.type = on_more_section.value;
+    //console.log(obj);
+    add_request(obj);
+});
+
+async function add_request(obj){
+    try {
+        let res = await fetch(productBaseUrl,{
+            method : "POST",
+            headers : {
+                "Content-Type":"application/json",
+            },
+            body : JSON.stringify(obj),
+        });
+        if(res.ok){
+            fetchdata();
+            alert("New Product has been added successfully");
+        }
+    } catch (error) {
+      alert(error);
+    }
+};
+
+
+// for pagination-wrapper
+let paginationWrapper = document.querySelector("#pagination-wrapper");
+function renderPaginationButtons(total_pages){
+   //paginationWrapper.innerHTML ="";
+  // console.log(total_pages);
+    paginationWrapper.innerHTML = `
+        <div class="pagination-btn-list">
+             ${CreatePagButton(total_pages).join(" ")}
+        </div>
+         `;     
+     //console.log(paginationWrapper.innerHTML);
+      let all_button = document.querySelectorAll(".pagination-btn");
+      for(let key of all_button){
+            key.addEventListener("click",(event)=>{
+               let page_number = event.target.dataset.id;
+                //console.log(page_number);
+               fetchdata(page_number);
+            });
+      }
+};
+
+ function CreatePagButton(total_page){
+        let array = [];
+        for(let page=1; page<=total_page; page++){
+            array.push(getAsButton(page,"pagination-btn",page))
+        }
+       // console.log(array);
+        return array;
+         }
+
+function getAsButton(text, clss, dataId){
+    return `<button class="${clss}" ${dataId ? `data-id=${dataId}` : ''}> ${text} </button>`
+};
+
+
+
+
+
+
+

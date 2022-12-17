@@ -62,31 +62,69 @@
     <div id="form">
         <form action="">
             <label for="">Your email address</label>
-            <input type="email">
+            <input id="email" type="email">
             <label for="">Confirm Email</label>
-            <input type="email">
+            <input id="ConEmail" type="email">
             <label for="">First Name</label>
-            <input type="text">
+            <input id="name" type="text">
             <label for="">Subject</label>
-            <input type="text">
+            <input id="subject" type="text">
             <label for="">Please choose a request type below</label>
-            <select name="" id="">
+            <select name="" id="select">
                 <option value=""></option>
-                <option value="">Account Deletion</option>
-                <option value="">Error on Lyst</option>
-                <option value="">General Feedback</option>
-                <option value="">General Feedback</option>
-                <option value="">Lyst Account Enquiry</option>
-                <option value="">Lyst Order Enquiry</option>
-                <option value="">Lyst Order Enquiry</option>
-                <option value="">Other</option>
+                <option value="Account Deletion">Account Deletion</option>
+                <option value="Error on Lyst">Error on Lyst</option>
+                <option value="General Feedback">General Feedback</option>
+                <option value="General Feedback">General Feedback</option>
+                <option value="Lyst Account Enquiry">Lyst Account Enquiry</option>
+                <option value="Lyst Order Enquiry">Lyst Order Enquiry</option>
+                <option value="Lyst Order Enquiry">Lyst Order Enquiry</option>
+                <option value="Other">Other</option>
             </select>
             <p></p>
             <label for="">Description</label>
-            <input type="text">
+            <textarea id="description" name="w3review" rows="16" cols="68"></textarea>
             <input id="submit" type="button" value="submit">
         </form>
     </div>
-    
 </body>
 </html>
+<script>
+    let formSData=document.querySelector("#form>form");
+    console.log(formSData);
+    document.querySelector("#submit").addEventListener("click",function(e){
+        e.preventDefault();
+        let email=document.querySelector("#email").value;
+        console.log("email");
+        let ConEmail=document.querySelector("#ConEmail").value;
+        let name=document.querySelector("#name").value;
+        let subject=document.querySelector("#subject").value;
+        let select=document.querySelector("#select").value;
+        console.log(select);
+        let Description=document.querySelector("#description").value;
+        
+        if(email==""||ConEmail==""||name==""||subject==""||Description==""){
+            alert("Fill The Whole Form")
+        }
+        else{
+            if(email==ConEmail){
+                let obj={
+                    email,name,subject,select,Description
+                }
+                DescriptionFetch(obj);
+            }else{
+                alert("Please Fill the Same email in Confirm Email as well")
+            }
+        }
+    })
+    async function DescriptionFetch(data){
+        // console.log(data);
+        let response=await fetch("http://localhost:3000/CustomerQueries",{
+            method:"POST",
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body:JSON.stringify(data)
+        })
+    }
+</script>

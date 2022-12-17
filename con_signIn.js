@@ -2,7 +2,7 @@ let signin_navbar = document.querySelector("#signin_navbr");
 let signinContainer = document.querySelector("#signin_page");
 
 
-if(signin_navbar.innerText === "Sign-In"){ 
+{ 
    signinContainer.innerHTML = `
     <form>
             <h1>The only fashion site you need</h1><br>
@@ -57,8 +57,8 @@ function checkdata(input,data){
             if(input.email == data[i].emailId && input.password == data[i].password){
                     alert("Login Successful");
                     flag=true;
-                    let signin_navbar = document.querySelector("#signin_navbr");
-                    signin_navbar.innerHTML = "Account";
+                    // let signin_navbar = document.querySelector("#signin_navbr");
+                    // signin_navbar.innerHTML = "Account";
                     window.location.href="./index.html";
             }
       };

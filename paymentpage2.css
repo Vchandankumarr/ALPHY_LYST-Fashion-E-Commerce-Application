@@ -115,3 +115,58 @@
     border-radius: 3px;
     margin-bottom: 25px;
 }
+#cvv{
+    width: 100%;
+}
+#dateofcard{
+    padding: 8px;
+    width: 20%;
+    border: 1px solid gainsboro;
+}
+#securitycode{
+    width: 21%;;
+    padding: 8px;
+    border: 1px solid gainsboro;
+}
+#edetail{
+    display: flex;
+    gap: 8px;
+}
+#orderBtn{
+    display: flex;
+    justify-content: center;
+}
+#orderBtn button{
+    padding: 10px;
+    width: 50%;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+#orderBtn+p{
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+#orderBtn+p+p{
+    text-align: center;
+    font-size: 12px;
+}@media only screen and (max-width:650px) and (min-width:100px){
+    #maincontainer{
+        display: flex;
+        flex-direction: column;
+    }
+    #title{
+        width: 100%;
+    }#addressdetail{
+        width:100%;
+    }
+    #delivery{
+        margin-right: 0px;
+    }
+    #orders{
+        margin: auto;
+    }
+}

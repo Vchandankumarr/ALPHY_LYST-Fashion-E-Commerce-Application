@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="admin_desbord_navbar"> Admin - Database</div>
-    <div id="admin_desbord">
+  <div id="admin_desbord">
     <div id="slide">
       <div id="admin">
         <div>
@@ -26,7 +26,7 @@
         <form>
            <p>
             <label>Product Name</label>
-            <input type="text" id="productName" placeholder="Product Name"/>
+            <input type="text" id="Product_name" placeholder="Product Name"/>
            </p>
            <p>
             <label>Image</label>
@@ -35,7 +35,7 @@
            <p>
             <label>Item-Catergories</label>
             <select>
-              <option>select item</option>
+              <option>Select-Item</option>
               <option>Shoes</option>
               <option>Clothes</option>
               <option>Accessories</option>
@@ -53,21 +53,23 @@
             <input type="text" id="description" placeholder="Woodhouse Clothing" />
            </p>
            <p>
-            <label>Brands</label>
-            <input type="text" id="brand" placeholder="Brand name"/>
+            <label>Brand</label>
+            <input type="text" id="brands" placeholder="Brand name"/>
            </p>
            <p>
             <input id="submit" type="submit" value="Add" >
            </p>
         </form>
       </div>
+      <!-- for pagination-warpper -->
+     
     </div>
     <div id="right-side">
       <div id="functionality">
         <h2 class = total >Total Products : 0</h2>
         <input id="search" type="search" placeholder="search product">
         <select>
-          <option>select item</option>
+          <option>Select-Item</option>
           <option>Shoes</option>
           <option>Clothes</option>
           <option>Accessories</option>
@@ -96,6 +98,8 @@
                   </div>
               </div>
             </div>  -->
+        </div>
+      <div class="pagination-wrapper" id="pagination-wrapper">Pagination</div>
     </div>
    </div>
   </body>
