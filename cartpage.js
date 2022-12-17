@@ -10,6 +10,8 @@ let totalprice=document.getElementById("Price")
 let totaldiscount=document.getElementById("totalDiscount")
 let totalbill=document.getElementById("TotalPric")
 let totalDeliverycharges=document.getElementById("totalDeliverycharges")
+let afterdisc=document.getElementById("after_disc")
+// afterdisc.innerHTML=5522
 // let totlprice;
 // totalproduct.innerHTML=products.length
 async function cart()
@@ -61,7 +63,8 @@ function totaldisc(procuctdisc)
     totaldiscount.innerHTML=20+"%";
       let totlprice= procuctdisc-((20/100)*procuctdisc)
     totalbill.innerHTML="₹"+totlprice
-    totalDeliverycharges.innerHTML="₹"+0
+    totalDeliverycharges.innerHTML="₹"+0;
+    afterdisc.innerHTML=`You will save ₹${Math.floor(procuctdisc-totlprice)} on this order`
   }
   else{
     totaldiscount.innerHTML=0+"%"
@@ -130,8 +133,14 @@ function append(data) {
     let name=document.createElement("h4")
     name.innerHTML=element.Product_name
 
-    let color=document.createElement("p")
-    color.innerHTML="white"
+
+          let delivery=document.createElement("p")
+          delivery.setAttribute("class","delivery")
+          delivery.innerHTML=`Delivery in ${Math.floor(Math.random() * 10)} days.`
+
+
+    let brands=document.createElement("p")
+    brands.innerHTML=`brand : ${element.brands}`
 
     
     
@@ -155,7 +164,7 @@ function append(data) {
 
     
     let placeOrder=document.createElement("button")
-    placeOrder.innerHTML="place order"
+    placeOrder.innerHTML="PLACE ORDER"
     placeOrder.setAttribute("class","placeorder")
     placeOrder.onclick=()=>{
       payment()
@@ -165,7 +174,7 @@ function append(data) {
 
     lcontainer.append(image,incrementbtn)
 
-    Rcontainer.append(name,color,price,addtowishlist,description,removeproduct,description,placeOrder)
+    Rcontainer.append(name,delivery,brands,price,addtowishlist,description,removeproduct,description,placeOrder)
     pcontainer.append(lcontainer,Rcontainer)
     container.append(pcontainer)
     });
