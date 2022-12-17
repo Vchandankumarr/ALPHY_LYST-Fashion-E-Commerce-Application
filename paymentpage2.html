@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="title">GILT</div>
+    <div id="title">ALPHA LYST</div>
     <div id="sponser">Secure International Checkout by<h3>borderfree</h3></div>
     <div id="maincontainer">
         <div id="addressdetail">
@@ -21,6 +21,9 @@
                 </div>
                 <div id="dmethod">
                     <h4>DELIVERY METHOD:</h4>
+                    <p>Express <br>
+                        No additional import
+                        charges at delivery</p>
                 </div>
             </div>
             <div id="line"></div>
@@ -34,24 +37,21 @@
             <div id="credit_card">
                 <input type="radio" name="" id="">
                 <p>Credit or Debit Card</p>
-                <img src="https://global.prd.borderfree.com/cdn/checkout/logos/visa.svg" alt="">
-                <img src="https://global.prd.borderfree.com/cdn/checkout/logos/mastercard.svg" alt="">
             </div>
-            <input id="cardNum" type="number" placeholder="Card Number">
+            <input id="cardNum" onKeyPress="if(this.value.length==16) return false;" type="number" placeholder="Card Number">
             <div id="cvv">
-                <input type="date" placeholder="MM/YY">
-                <input type="number" placeholder="Security Code">
+                <input id="dateofcard" type="date" placeholder="MM/YY">
+                <input id="securitycode" type="number" onKeyPress="if(this.value.length==3) return false;" placeholder="Security Code" />
             </div>
             <div>
-                .............................................
-                .............................................
+                
             </div>
-            <div>
+            <div id="edetail">
                 <input type="checkbox" name="" id="">
                 <p>Send me electronic or mail offers from Borderfree. You may opt out at any time.</p>
             </div>
             <div id="orderBtn">
-                <button>Place Order</button>
+                <button onclick="placeOrder()">Place Order</button>
             </div>
             <p>This order total is 100% guaranteed. There will be no additional charges due upon receipt.</p>
             <p>By placing your order, you agree to the Terms & Conditions and Privacy Policy of Boderfree, a Global-e company, Gilt's international <br>
@@ -103,3 +103,47 @@
     </div>
 </body>
 </html>
+<script>
+
+    let localdata = JSON.parse(localStorage.getItem("address"));
+    let dAddress = document.getElementById("daddress");
+    let dMethod = document.getElementById("dmethod");
+    let cardNumber = document.getElementById("cardNum");
+    let cardDate = document.getElementById("dateofcard");
+    let cvv = document.getElementById("securitycode");
+   
+    function placeOrder(){
+        if(cardNumber.value=="" || cardDate.value=="" || cvv.value==""){
+            alert("please fill the details carefully")
+        }
+        else{
+            alert("Payment successfull, Thankyou for shopping");
+            window.location.href = "index.html"
+        }
+        
+    }
+
+    // console.log(localdata)
+    localdata.forEach((e) => {
+    let div = document.createElement("div")
+
+    let name = document.createElement("p");
+    name.innerText = e.Name;
+
+    let address = document.createElement("p");
+    address.innerText = e.address+","+e.postalcode;
+
+    let city = document.createElement("p");
+    city.innerText = e.city +","+ e.region;
+
+    let country = document.createElement("p");
+    country.innerText = "India";
+
+    div.append(name,address,city,country);
+    dAddress.append(div)
+    // console.log(e)
+    });
+    
+
+   
+</script>
