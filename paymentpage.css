@@ -1,5 +1,6 @@
 #maincontainer{
     display: flex;
+    width: 100%;
 }
 #title{
     font-size: 35px;
@@ -27,7 +28,7 @@
 }
 #addressdetail{
     padding-left: 5%;
-    width: 55%;
+    width: 75%;
     border: 1px solid gainsboro;
     border-bottom: 0px;
     margin-top: 10px;
@@ -38,7 +39,7 @@
     margin-right: 20px;
 }
 .inputFlength{
-    width: 700px;
+    width: 95%;
     padding: 8px;
     margin-bottom: 20px;
     border:1px solid gainsboro;
@@ -50,8 +51,7 @@
     width: 100%;
 }
 .inputHlength {
-    width: 330px;
-    margin-right: 20px;
+    width: 120%;
     padding: 8px;
     border:1px solid gainsboro;
     border-radius: 5px;
@@ -103,7 +103,7 @@
 }
 #ordersmain{
     border-top: 1px solid gainsboro;
-    width: 100%;
+    width: 45%;
     margin-top: 10px;
     max-height:0fr;
 }
@@ -144,4 +144,57 @@
     border-top: 1px solid gainsboro;
     border-bottom: 1px solid gainsboro;
     padding: 12px;
+}#fname{
+    width:37%;
+    margin-right: 5px;
+}
+#Lname{
+    width: 38.5%;
+    margin-left: 11%;
+    margin-right: 5%;
+}
+#istreat{
+    width:37%;
+    margin-right: 5px;
+}
+#postal{
+    width: 38.5%;
+    margin-left: 11%;
+    margin-right: 5%;
+}
+#icity{
+    width:37%;
+    margin-right: 5px;
+}
+#iregion{
+    width: 38.5%;
+    margin-left: 11%;
+    margin-right: 5%;
+}
+#iphone{
+    width:37%;
+    margin-right: 5px;
+}
+#icountry{
+    width: 40%;
+    margin-left: 11%;
+    margin-right: 5%;
+}
+@media only screen and (max-width:650px) and (min-width:100px){
+    #maincontainer{
+        display: flex;
+        flex-direction: column;
+    }
+    #title{
+        width: 100%;
+    }#addressdetail{
+        width:100%;
+    }
+    #delivery{
+        margin-right: 0px;
+    }
+    #ordersmain{
+        margin: auto;
+        width: 80%;
+    }
 }
