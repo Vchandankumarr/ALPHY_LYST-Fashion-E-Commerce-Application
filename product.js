@@ -37,8 +37,9 @@ function display(data){
                       <button id="add" data-id=${item.id}>Add TO Cart</button>
                 </div>
                 <div id="childTwo">
-                       <i id="wishlist" data-id=${item.id} class="fa-regular fa-heart fa-2x"></i>
-                      
+                <button id="wishlist"> 
+                       <i  data-id=${item.id}  class="fa-regular fa-heart fa-2x"></i>
+                       </button>
                 </div>
             </div>
          </div>
@@ -48,27 +49,61 @@ function display(data){
     let btn=document.querySelectorAll("#add");
     for(let addCardBtn of btn){
         addCardBtn.addEventListener("click",function(e){
+            alert("Added On cart Page")
             card_data(e.target.dataset.id);
     })
     };
     let wishlist=document.querySelectorAll("#wishlist");
     for(let wishlistAdd of wishlist){
         let count=0;
+        let flag = false;
         wishlistAdd.addEventListener("click",function(event){
-            count++;
-            console.log(count);
-            let id=event.target.dataset.id;
-            wishlist_data(event.target.dataset.id)
-            let div=event.path[1];
-            console.log(event.target);
-            removeWishlist(event)
-            div.innerHTML="";
-            div.innerHTML=
-            `<i id="redcolor" data-id=${id} class="fa-solid fa-heart fa-2x"></i>
-            `
+           if(flag == false){
+            // flag = true
+            // console.log(flag)
+            alert("Added On wishlist")
+    let id=event.target.dataset.id;
+    wishlist_data(event.target.dataset.id)
+    let div=event.path[1];
+    console.log(event.target);
+   
+   
+    div.innerHTML=
+    `<i id="redcolor" data-id=${id} class="fa-solid fa-heart fa-2x"></i>
+    `
+    flag = true
+
+           }else{
+            flag = false
+            console.log(flag)
+              let id=event.target.dataset.id;
+    // wishlist_data(event.target.dataset.id)
+    let div=event.path[1];
+    console.log(event.target);
+    console.log(flag , "ritesh")
+    alert("Removed from Wishlist")
+   
+    div.innerHTML=
+    `  <i data-id=${id}  class="fa-regular fa-heart fa-2x"></i>
+    `
+           }
+           
     
         })
     }
+    // count++;
+    // console.log(count);
+    // let id=event.target.dataset.id;
+    // wishlist_data(event.target.dataset.id)
+    // let div=event.path[1];
+    // console.log(event.target);
+    // div.innerHTML="";
+    // div.innerHTML=
+    // `<i id="redcolor" data-id=${id} class="fa-solid fa-heart fa-2x"></i>
+    // `
+
+
+
     let colorWishlist=document.querySelectorAll("#redcolor");
     console.log(colorWishlist);
     // for(let heartBtn of colorWishlist){
@@ -78,8 +113,7 @@ function display(data){
     // }
    
 }
-function removeWishlist(event){
-} 
+
 async function card_data(id){
     try {
         let response=await fetch(`https://639aeab431877e43d67b3d7d.mockapi.io/products/${id}`);
@@ -115,6 +149,7 @@ async function wishlist_data(id){
         if(response.ok){
             let result=await response.json();
             wishlistPageData(result)
+            return
         }
     } catch (error) {
         console.log(error);

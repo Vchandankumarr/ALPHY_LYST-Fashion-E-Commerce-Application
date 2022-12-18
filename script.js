@@ -42,3 +42,10 @@ let accounticon = document.querySelector("#accounticon");
 accounticon.innerHTML = localStorage.getItem("sign_username");
 
 
+function searching(){
+  let value=document.querySelector("#centerProduct").value;
+  if(value){
+    // window.location.href="product.html"
+  }
+  
+}
