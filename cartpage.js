@@ -16,15 +16,15 @@ let afterdisc=document.getElementById("after_disc")
 // totalproduct.innerHTML=products.length
 
 // let cart_items_ls=JSON.parse(localStorage.getItem("My_cart"))
-
-async function cart()
+ let ttlprc=0;
+async function cart(ttlprc)
 {
   try {
     let res=await fetch("https://639aeab431877e43d67b3d7d.mockapi.io/carts")
     let data=await res.json()
     console.log(data)
     totalproduct.innerHTML=data.length
-    append(data)
+    
   
 
     // 
@@ -34,15 +34,20 @@ async function cart()
     );
     // console.log(sumWithInitial)
     // 
+  
+   
+    console.log(ttlprc)
 totalprice.innerHTML="₹"+producttotal
 // expected output: 10
 totaldisc(producttotal)
+append(data,producttotal)
   } 
   catch (error) {
     
   }
 }
-cart()
+cart(ttlprc)
+console.log(ttlprc)
 const array1 = [1, 2, 3, 4];
 
 // 0 + 1 + 2 + 3 + 4
@@ -78,8 +83,8 @@ function totaldisc(procuctdisc)
 }
 
 
-function append(data) {
-
+function append(data,producttotal) {
+console.log(producttotal)
     let container = document.getElementById("productcontainer");
     container.innerHTML = null;
 
@@ -95,7 +100,9 @@ function append(data) {
     image.src=element.image
 
     let price=document.createElement("p")
-    price.innerHTML="₹"+element.price
+    price.setAttribute("class","price")
+
+    price.innerHTML="Price: "+"₹"+element.price
     let productprice=price
 
 //  adding increment and decrement 
@@ -116,7 +123,7 @@ function append(data) {
         decrementspan.innerHTML="-";
         
         decrementspan.addEventListener("click",()=>{
-          Decrement(totalnumber,productprice,element.price)
+          Decrement(totalnumber,productprice,element.price,producttotal)
         } )
 
         let incrementspan=document.createElement("button")
@@ -125,7 +132,7 @@ function append(data) {
        
         incrementspan.addEventListener("click", ()=>
         {
-          Increment(totalnumber,productprice,element.price)
+          Increment(totalnumber,productprice,element.price,producttotal)
         })
         
        
@@ -134,6 +141,7 @@ function append(data) {
 
 // 
     let name=document.createElement("h4")
+    name.setAttribute("class", "name")
     name.innerHTML=element.Product_name
 
 
@@ -143,23 +151,24 @@ function append(data) {
 
 
     let brands=document.createElement("p")
-    brands.innerHTML=`brand : ${element.brands}`
+    brands.setAttribute("class","brands")
+    brands.innerHTML=`Brand : ${element.brands}`
 
     
     
     let addtowishlist=document.createElement("button")
     addtowishlist.setAttribute("class","button")
-    addtowishlist.innerHTML="add to wishlis";
+    addtowishlist.innerHTML="Add to Wishlist";
     addtowishlist.addEventListener("click",()=>{
-      Addtowishlist(element.id)
+      Addtowishlist(element.id,element.Product_name)
     })
 
     let removeproduct=document.createElement("button")
     removeproduct.setAttribute("class","remove")
-    removeproduct.innerHTML="remove";
+    removeproduct.innerHTML="Remove";
    
     removeproduct.addEventListener("click",()=>{
-      deleteProduct(element.id)
+      deleteProduct(element.id,element.Product_name)
     })
 
     let description=document.createElement("p")
@@ -185,30 +194,40 @@ function append(data) {
 
 }
 
-function Decrement(dec,productprice,price)
+function Decrement(dec,productprice,price,ttlprc)
 {
   console.log("-")
   if(a>1)
   {
-    a--;
-    // totalnumber.innerHTML=a
+   
+   
     dec.innerHTML=a
     productprice.innerHTML="₹"+price*a
-    
-    console.log(typeof a)
+    console.log(ttlprc)
+    let d=ttlprc+(price*(a-2))
+    console.log(d)
 
-
+    totalprice.innerHTML='₹'+d
+    totalbill.innerHTML='₹'+d
+    // console.log(typeof a)
+   
+    a--;
   }
 }
 
-function Increment(inc,productprice,price)
+function Increment(inc,productprice,price,ttlprc)
 {
-  console.log(price)
-    console.log("+")
-    a++
-    let b=1
+  // console.log(price)
+    // console.log("+")
+    
+    // let b=1
     inc.innerHTML=a
     productprice.innerHTML="₹"+price*a;
+let t=ttlprc+(price*a)
+console.log(t)
+    totalprice.innerHTML="₹"+t
+    totalbill.innerHTML='₹'+t
+    a++
     
 
 }
@@ -217,12 +236,12 @@ function payment(element)
 {
 console.log(element)
 
- localStorage.setItem("buy-list", JSON.stringify(element));
+ localStorage.setItem("buy-list",JSON.stringify(buy))
 
-   window.open("./paymentPage.html", "_self")
+  window.open("./payment.html", "_self")
 }
 
-async function Addtowishlist(id)
+async function Addtowishlist(id,name)
 {
   console.log("whistlist")
   console.log(id)
@@ -231,6 +250,7 @@ async function Addtowishlist(id)
     let data=await res.json()
     console.log(data)
     addproducttowishlist(data)
+    alert(`${name} added to wishlist!`)
   } catch (error) {
     
   }
@@ -258,7 +278,7 @@ async function addproducttowishlist(data){
 
 
 
- async function deleteProduct(id){
+ async function deleteProduct(id,name){
   console.log("remove")
   console.log(id)
   try {
@@ -268,6 +288,7 @@ async function addproducttowishlist(data){
     console.log(res)
     let data=await res.json()
     console.log(data)
+    alert(`${name} removed form cart!`)
     cart()
   } catch (error) {
     
