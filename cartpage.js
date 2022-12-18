@@ -14,6 +14,9 @@ let afterdisc=document.getElementById("after_disc")
 // afterdisc.innerHTML=5522
 // let totlprice;
 // totalproduct.innerHTML=products.length
+
+// let cart_items_ls=JSON.parse(localStorage.getItem("My_cart"))
+
 async function cart()
 {
   try {
@@ -167,7 +170,7 @@ function append(data) {
     placeOrder.innerHTML="PLACE ORDER"
     placeOrder.setAttribute("class","placeorder")
     placeOrder.onclick=()=>{
-      payment()
+      payment(element)
     }
 
     incrementbtn.append(decrementspan,totalnumber,incrementspan)
@@ -210,9 +213,13 @@ function Increment(inc,productprice,price)
 
 }
 
-function payment()
+function payment(element)
 {
-  window.open("./paymentPage.html", "_self")
+console.log(element)
+
+ localStorage.setItem("buy-list",JSON.stringify(buy))
+
+  // window.open("./paymentPage.html", "_self")
 }
 
 async function Addtowishlist(id)
