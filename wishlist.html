@@ -4,13 +4,404 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AlphaLyst/whishlist.com</title>
+     <link rel="stylesheet" href="./navBar.css">
+      <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <title>AlphaLyst | whishlist.com</title>
     <link rel="stylesheet" href="whislist.css">
+         <script src="./navBar.js" defer ></script>
+          <style>
+        #parent{
+            background-color: #f5f4f2;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            border-top: 1px solid black;
+            margin-top: 20px;
+            padding-top: 50px;
+            padding-bottom: 48px;
+            width: 100%;
+            /* height:50px; */
+        }
+        #child_1{
+            width: 40%;
+            margin-top: -180px;
+            /* text-align: center; */
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* align-items: center; */
+            margin-left: 200px;
+
+        }
+        #child_2{
+            display: flex;
+            justify-content: space-evenly;
+            width:40%;
+            margin-left: -280px;
+        }
+        #child_2>div>a{
+            display: block;
+            text-decoration: none;
+            color: rgb(51, 46, 46);
+            margin-left: 5px;
+        }
+        #child_1>:nth-child(1)>img{
+            backface-visibility: hidden;
+            width: 18%;
+            background-color: #000;
+        }
+        #child_1>:nth-child(2){
+           width:26%;
+        }
+        #child_1>:nth-child(3)>p{
+          color:rgb(100, 99, 99);
+        }
+       
+        .pr{
+          color:black;
+          font-weight: bold;
+        }
+        #child_1>:nth-child(5)>:nth-child(1){
+          width:20%;
+        }
+        #child_1>:nth-child(5)>:nth-child(2){
+          width:23%;
+          margin-left: 12px;
+        }
+        #child_1>:nth-child(6){
+          margin:25px 0;
+        }
+        #child_1>:nth-child(4){
+          margin-bottom:15px;
+        }
+        h3{
+            font-weight:light;
+            color: rgb(32, 30, 30);
+        }
+        #child_2>:nth-child(1){
+            padding-left: -50px;
+
+        }
+        #child_2>div>a{
+            font-size: 16px;
+            margin-top: 8px;
+
+        }
+
+
+
+    </style>
 </head>
 <body>
+    <div id="navBar">
+  <div id="navTop">
+
+<div><a href="./admin/adminlogin.html">Admin Panel</a></div>
+<!-- <div><a href="#">IN-US$</a></div> -->
+
+<div class="help-signin-account"><a href="#parent">Help</a><i class="fa-solid fa-angle-down"></i>
+   <ul class="sub-help">
+   <li><a href="#parent">Help Center</a></li>
+   <li><a href="#parent">Contact Us</a></li>
+   <li><a href="#parent">About Us</a></li>
+   <li><a href="#parent">Careers</a></li>
+   
+   </ul>
+  </div>
+  <!-- use this as sign in -->
+<div class="help-signin-account"><a href="./cou_signIn.html">Account</a><i class="fa-solid fa-angle-down"></i>
+<ul class="sub-account sub-help">
+   <li><a href="./cou_signIn.html">Alerts</a></li>
+   <li><a href="./cou_signIn.html">Saved items</a></li>
+   <li><a href="./cou_signIn.html">Followed Brands</a></li>
+   <li><a href="./cou_signIn.html">My Searches</a></li>
+   <li><a href="./cou_signIn.html">Settings</a></li>
+   <li><button>Sign Out</button></li>
+
+   </ul>
+</div>
+ </div>
+ <div id="navBottom">
+<div> <a href="./index.html"><img src="./ALPHA_LOGOF.jpg" width="150px" alt=""></a></div>
+  <!--START dropDown MEnu for WOMEN & MEN-->
+
+
+  <div class="dropdown" data-dropdown><button class="link" data-dropdown-button>WOMEN</button><div class="drop-down-Menu information-grid">
+     <div class="dropMenu-box">
+     <div>
+        <div class="drop-down-heading">Clothing
+        <div class="drop-down-links">
+           <a href="#" class="link">All jewelry</a>
+           <a href="#" class="link">Bracelets</a>
+           <a href="#" class="link">Brooches</a>
+           <a href="#" class="link">Earrings and ear cuffs</a>
+           <a href="#" class="link">Rings</a>
+           <a href="#" class="link">New Arrivals in Jewelry</a>
+           <a href="#" class="link"><i class="fa-solid fa-tag" style="color: red;"></i>Jewelry on Sale</a>
+        </div>
+        </div>
+     </div>
+     <div>
+        <div class="drop-down-heading">Shoes
+        <div class="drop-down-links">
+           <a href="#" class="link">All Shoes</a>
+           <a href="#" class="link">Boots</a>
+           <a href="#" class="link">Flats and flat shoes</a>
+           <a href="#" class="link">Heels</a>
+           <a href="#" class="link">Sneakers</a>
+           <a href="#" class="link">New Arrivals in Shoes</a>
+           <a href="#" class="link"><i class="fa-solid fa-tag" style="color: red;"></i>Shoes on Sale</a>
+        </div>
+        </div>
+     </div>
+     <div>
+        <div class="drop-down-heading">Accessories
+        <div class="drop-down-links">
+           <a href="#" class="link">All Accessories</a>
+           <a href="#" class="link">Belts</a>
+           <a href="#" class="link">Phone cases</a>
+           <a href="#" class="link">Face masks</a>
+           <a href="#" class="link">Gloves</a>
+           <a href="#" class="link">Hats</a>
+           <a href="#" class="link"><i class="fa-solid fa-tag" style="color: red;"></i>Accessories on Sale</a>
+        </div>
+        </div>
+     </div>
+     <div>
+        <div class="drop-down-heading">Bags
+        <div class="drop-down-links">
+           <a href="#" class="link">All Bags</a>
+           <a href="#" class="link">Backpacks</a>
+           <a href="#" class="link">Bag accessories</a>
+           <a href="#" class="link">Shoulder bags</a>
+           <a href="#" class="link">Top-handle bags</a>
+           <a href="#" class="link">Tote bags</a>
+           <a href="#" class="link"><i class="fa-solid fa-tag" style="color: red;"></i>Bags on Sale</a>
+        </div>
+        </div>
+     </div>
+     <div>
+        <div class="drop-down-heading">Jewelry
+        <div class="drop-down-links">
+           <a href="#" class="link">All Jewelry</a>
+           <a href="#" class="link">Bracelets</a>
+           <a href="#" class="link">Brooches</a>
+           <a href="#" class="link">Necklaces</a>
+           <a href="#" class="link">New Arrivals in Jewelry</a>
+           <a href="#" class="link">Rings</a>
+           <a href="#" class="link"><i class="fa-solid fa-tag" style="color: red;"></i>Jewelry on Sale</a>
+        </div>
+        </div>
+     </div>
+     <div>
+        <div class="drop-down-heading">Brands
+        <div class="drop-down-links">
+           <a href="#" class="link">Balenciaga</a>
+           <a href="#" class="link">Bottega Veneta</a>
+           <a href="#" class="link">Chloé</a>
+           <a href="#" class="link">Ganni</a>
+           <a href="#" class="link">Gucci</a>
+           <a href="#" class="link">H&M</a>
+           <a href="#" class="link"><i class="fa-solid fa-tag" style="color: red;"></i>Isabel Marant</a>
+        </div>
+        </div>
+     </div>
+     <div>
+        <div class="drop-down-heading-women">All Women's
+        <div class="drop-down-links">
+        </div>
+        </div>
+     </div>
+     <div>
+        <div class="drop-down-heading"><i class="fa-solid fa-tag" style="color: red;"></i>Sale
+        <div class="drop-down-links">
+        </div>
+        </div>
+     </div>
+     
+     </div>
+  </div>
+  
+  <button class="link" data-dropdown-button>MEN</button><div class="drop-down-Menu information-grid">
+     <div class="dropMenu-box">
+     <div>
+        <div class="drop-down-heading">Clothing
+        <div class="drop-down-links">
+           <a href="./product.html" class="link">All jewelry</a>
+           <a href="./product.html" class="link">Bracelets</a>
+           <a href="./product.html" class="link">Brooches</a>
+           <a href="./product.html" class="link">Earrings and ear cuffs</a>
+           <a href="./product.html" class="link">Rings</a>
+           <a href="./product.html" class="link">New Arrivals in Jewelry</a>
+           <a href="./product.html" class="link"><i class="fa-solid fa-tag" style="color: red;"></i>Jewelry on Sale</a>
+        </div>
+        </div>
+     </div>
+     <div>
+        <div class="drop-down-heading">Shoes
+        <div class="drop-down-links">
+           <a href="./product.html" class="link">All Shoes</a>
+           <a href="./product.html" class="link">Boots</a>
+           <a href="./product.html" class="link">Flats and flat shoes</a>
+           <a href="./product.html" class="link">Heels</a>
+           <a href="./product.html" class="link">Sneakers</a>
+           <a href="./product.html" class="link">New Arrivals in Shoes</a>
+           <a href="./product.html" class="link"><i class="fa-solid fa-tag" style="color: red;"></i>Shoes on Sale</a>
+        </div>
+        </div>
+     </div>
+     <div>
+        <div class="drop-down-heading">Accessories
+        <div class="drop-down-links">
+           <a href="./product.html" class="link">All Accessories</a>
+           <a href="./product.html" class="link">Belts</a>
+           <a href="./product.html" class="link">Phone cases</a>
+           <a href="./product.html" class="link">Face masks</a>
+           <a href="./product.html" class="link">Gloves</a>
+           <a href="./product.html" class="link">Hats</a>
+           <a href="./product.html" class="link"><i class="fa-solid fa-tag" style="color: red;"></i>Accessories on Sale</a>
+        </div>
+        </div>
+     </div>
+     <div>
+        <div class="drop-down-heading">Bags
+        <div class="drop-down-links">
+           <a href="./product.html" class="link">All Bags</a>
+           <a href="./product.html" class="link">Backpacks</a>
+           <a href="./product.html" class="link">Bag accessories</a>
+           <a href="./product.html" class="link">Shoulder bags</a>
+           <a href="./product.html" class="link">Top-handle bags</a>
+           <a href="./product.html" class="link">Tote bags</a>
+           <a href="./product.html" class="link"><i class="fa-solid fa-tag" style="color: red;"></i>Bags on Sale</a>
+        </div>
+        </div>
+     </div>
+     <div>
+        <div class="drop-down-heading">Jewelry
+        <div class="drop-down-links">
+           <a href="./product.html" class="link">All Jewelry</a>
+           <a href="./product.html" class="link">Bracelets</a>
+           <a href="./product.html" class="link">Brooches</a>
+           <a href="./product.html" class="link">Necklaces</a>
+           <a href="./product.html" class="link">New Arrivals in Jewelry</a>
+           <a href="./product.html" class="link">Rings</a>
+           <a href="./product.html" class="link"><i class="fa-solid fa-tag" style="color: red;"></i>Jewelry on Sale</a>
+        </div>
+        </div>
+     </div>
+     <div>
+        <div class="drop-down-heading">Brands
+        <div class="drop-down-links">
+           <a href="./product.html" class="link">Balenciaga</a>
+           <a href="./product.html" class="link">Bottega Veneta</a>
+           <a href="./product.html" class="link">Chloé</a>
+           <a href="./product.html" class="link">Ganni</a>
+           <a href="./product.html" class="link">Gucci</a>
+           <a href="./product.html" class="link">H&M</a>
+           <a href="./product.html" class="link"><i class="fa-solid fa-tag" style="color: red;"></i>Isabel Marant</a>
+        </div>
+        </div>
+     </div>
+     <div>
+        <div class="drop-down-heading">Watches
+        <div class="drop-down-links">
+        </div>
+        </div>
+     </div>
+     <div>
+        <div class="drop-down-heading"><i class="fa-solid fa-tag" style="color: red;"></i>Sale
+        <div class="drop-down-links">
+        </div>
+        </div>
+     </div>
+     
+     </div>
+  </div></div>
+  <!--END of Drop DOWN MENU  -->
+  <div class="box" ><i class="fa-solid fa-magnifying-glass"></i><input type="text" name="" id="" placeholder='  SEARCH (E.G "VALENTINO DRESSES")'></div>
+  <div class="wish-alert"><a href="./cartpage.html"><i class="fa-solid fa-cart-shopping"></i></a></div>
+  <div class="wish-alert"><a href="./wishlist.html"><i class="fa-regular fa-heart"></i></a></i></div>
+  <div class="wish-alert"><a href="./cou_signUp.html"><i class="fa-regular fa-bell"></i></a></i></div>
+ </div>
+ </div>
+<!-- END OF NAV BAR STILL MAY ADD SOME FEAUTERS IF THE TIME SUFFICIENT-->
     <div id="total_product"><h4 >Total Product:0</h4></div>
     
     <div id="container"></div>
+
+
+
+
+
+    <!-- footer -->
+
+<div id="parent">
+        <div id="child_1">
+            <div>
+                <!-- <img src="https://cdn.trustpilot.net/brand-assets/1.1.0/logo-white.svg" alt=""> -->
+                <!-- <h1>TrustPilot</h1> -->
+            </div>
+            <div>
+                <img src="https://cdn.trustpilot.net/brand-assets/4.1.0/stars/stars-4.5.svg" alt="">
+            </div>
+            <div>
+                <p>TrustScore &nbsp;<span class="pr">4.4</span><br><span class="pr">2,954</span>&nbsp;&nbsp;reviews</p>
+
+            </div>
+            <div>
+                <img src="./images/icons8-facebook-f-30.png" alt="">
+                <img src="./images/icons8-instagram-24.png" alt="">
+            </div>
+            <div>
+                <img  src="https://www.rdsdelivery.com/wp-content/uploads/2016/11/apple-app-store-icon-300x104.png.webp" alt="">
+                <img onClick="playstoreLink()"src="https://images.squarespace-cdn.com/content/v1/57923378ebbd1a9829570952/1550736662154-RCDC50WSXTAGPGE59P0T/6a248cbe42c32b17de10b5cc8e9c0f69.png?format=300w" alt="">
+            </div>
+            <div>
+                Learn about the Lyst app for iPhone, iPad and Android.
+            </div>
+            <div>© 2022 Lyst</div>
+            
+        </div>
+        <div id="child_2">
+            <div>
+                <h3>INTERNATIONAL</h3>
+                <a href="">Lyst - CA</a>
+                <a href="">Lyst - UK</a>
+                <a href="">Lyst - US</a>
+                <a href="">Lyst - Österreich</a>
+                <a href="">Lyst - Schweiz</a>
+                <a href="">Lyst - Deutschland</a>
+                <a href="">Lyst - España</a>
+                <a href="">Lyst - France</a>
+                <a href="">Lyst - Italia</a>
+                <a href="">Lyst - 日本</a>
+                <a href="">Lyst - België</a>
+                <a href="">Lyst - Nederland</a>
+            </div>
+            <div>
+                <h3>HELP AND INFO</h3>
+                <a href="service_page.html">Help centre</a>
+                <a href="">About us</a>
+                <a href="">Shipping policy</a>
+                <a href="">Returns policy</a>
+                <a href=""> Payments</a>
+                <a href="">Refund policy</a>
+                <a href="">Developers</a>
+                <a href="">Careers</a>
+                <a href="">Contact</a>
+                <a href="">Terms & conditions</a>
+                <a href="">Privacy & cookie policy</a>
+                <a href="">Intellectual property</a>
+                <a href="">Categories</a>
+                <a href="">Become a partner</a>
+                <a href="">Lyst Insights</a>
+                <a href="">Lyst News</a>
+            </div>
+        </div>
+    </div>
+
+
 </body>
 </html>
 

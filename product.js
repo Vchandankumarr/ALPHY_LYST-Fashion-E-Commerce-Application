@@ -34,7 +34,7 @@ function display(data){
                             <i class="fa-sharp fa-solid fa-link iconchain"></i>
                               <p>${item.description}</p>
                       </div>
-                      <button id="add" data-id=${item.id}>Add TO cart</button>
+                      <button id="add" data-id=${item.id}>Add TO Cart</button>
                 </div>
                 <div id="childTwo">
                        <i id="wishlist" data-id=${item.id} class="fa-regular fa-heart fa-2x"></i>

@@ -217,9 +217,9 @@ function payment(element)
 {
 console.log(element)
 
- localStorage.setItem("buy-list",JSON.stringify(buy))
+ localStorage.setItem("buy-list", JSON.stringify(element));
 
-  // window.open("./paymentPage.html", "_self")
+   window.open("./paymentPage.html", "_self")
 }
 
 async function Addtowishlist(id)
