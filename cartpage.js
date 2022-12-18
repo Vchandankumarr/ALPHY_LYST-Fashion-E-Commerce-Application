@@ -220,7 +220,7 @@ async function Addtowishlist(id)
   console.log("whistlist")
   console.log(id)
   try {
-    let res=await fetch(`https://639aeab431877e43d67b3d7d.mockapi.io/wishlists/${id}`)
+    let res=await fetch(`https://639aeab431877e43d67b3d7d.mockapi.io/carts/${id}`)
     let data=await res.json()
     console.log(data)
     addproducttowishlist(data)

@@ -6,56 +6,7 @@ let wishlistcontainer=document.getElementById("container")
 let total_product=document.getElementById("total_product")
 
 
-wish=[
-    {
-    Product_name:"Tasman Slippers-Brown",
-brands:"UGG",
-description:"Tessuti UK",
-id:"1",
-image:"https://cdna.lystit.com/200/250/tr/photos/tessuti/d9eb3519/ugg-Brown-Tasman-Slippers.jpeg",
-price:199,
-},
-{
-    Product_name:"Tasman Slippers-Brown",
-brands:"UGG",
-description:"Tessuti UK",
-id:"1",
-image:"https://cdna.lystit.com/200/250/tr/photos/tessuti/d9eb3519/ugg-Brown-Tasman-Slippers.jpeg",
-price:199,
-},
-{
-    Product_name:"Tasman Slippers-Brown",
-brands:"UGG",
-description:"Tessuti UK",
-id:"1",
-image:"https://cdna.lystit.com/200/250/tr/photos/tessuti/d9eb3519/ugg-Brown-Tasman-Slippers.jpeg",
-price:199,
-},
-{
-    Product_name:"Tasman Slippers-Brown",
-brands:"UGG",
-description:"Tessuti UK",
-id:"1",
-image:"https://cdna.lystit.com/200/250/tr/photos/tessuti/d9eb3519/ugg-Brown-Tasman-Slippers.jpeg",
-price:199,
-},
-{
-    Product_name:"Tasman Slippers-Brown",
-brands:"UGG",
-description:"Tessuti UK",
-id:"1",
-image:"https://cdna.lystit.com/200/250/tr/photos/tessuti/d9eb3519/ugg-Brown-Tasman-Slippers.jpeg",
-price:199,
-},
-{
-    Product_name:"Tasman Slippers-Brown",
-brands:"UGG",
-description:"Tessuti UK",
-id:"1",
-image:"https://cdna.lystit.com/200/250/tr/photos/tessuti/d9eb3519/ugg-Brown-Tasman-Slippers.jpeg",
-price:199,
-},
-]
+
 
 async function wishlist()
 {
