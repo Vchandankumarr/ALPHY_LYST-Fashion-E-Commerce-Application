@@ -74,10 +74,10 @@ function renderwishlist(data)
 
           let add_cart=document.createElement("button")
           add_cart.setAttribute("class","add_cart")
-          add_cart.innerHTML="add to cart"
+          add_cart.innerHTML="Add to Cart"
 
           add_cart.addEventListener("click",()=>{
-            Addtocart(element.id)
+            Addtocart(element.id,element.Product_name)
           })
 
           let remove=document.createElement("button")
@@ -85,7 +85,7 @@ function renderwishlist(data)
             remove.innerHTML="Remove";
 
             remove.addEventListener("click",()=>{
-                deleteProduct(element.id)
+                deleteProduct(element.id,element.Product_name)
               })
 
 
@@ -98,7 +98,7 @@ function renderwishlist(data)
 
 
 
-async function deleteProduct(id){
+async function deleteProduct(id,name){
     console.log("remove")
     console.log(id)
     try {
@@ -108,8 +108,9 @@ async function deleteProduct(id){
       console.log(res)
       let data=await res.json()
       console.log(data)
-      
+      alert(`${name} removed form cart!`)
       wishlist()
+      
     } catch (error) {
       
     }
@@ -117,7 +118,7 @@ async function deleteProduct(id){
 
 
 
-  async function Addtocart(id)
+  async function Addtocart(id,name)
 {
   console.log("cart")
   console.log(id)
@@ -125,6 +126,7 @@ async function deleteProduct(id){
     let res=await fetch(`https://639aeab431877e43d67b3d7d.mockapi.io/wishlists/${id}`)
     let data=await res.json()
     console.log(data)
+    alert(`${name} removed form cart!`)
     addproducttowishlist(data)
   } catch (error) {
     

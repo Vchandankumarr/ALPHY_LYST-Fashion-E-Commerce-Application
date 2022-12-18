@@ -159,3 +159,35 @@ body{
     border: black;
     
 }
+
+/*  */
+
+.name{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.delivery{
+    margin-bottom: 40px;
+    color: #ff6600;
+}
+
+.brands{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.price{
+    font-size: 20px;
+}
+
+.button{
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.remove{
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
