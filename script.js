@@ -39,3 +39,10 @@ function boundCards() {
 /* second cont */
 
 
+function searching(){
+  let value=document.querySelector("#centerProduct").value;
+  if(value){
+    // window.location.href="product.html"
+  }
+  
+}
