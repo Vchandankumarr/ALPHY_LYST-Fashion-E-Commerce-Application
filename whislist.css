@@ -1,9 +1,4 @@
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
 
-}
 #container{
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -39,13 +34,12 @@
 }
 
 #total_product{
-    float: top;
-    /* padding-left: 100px; */
-    position: -webkit-sticky; /* Safari */
+  float: top;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   background-color:#777;
   color:white;
   font-size: 20px;
-  /* margin-left: 20px; */
+ 
 }
