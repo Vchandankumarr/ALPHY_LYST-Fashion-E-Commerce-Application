@@ -16,7 +16,7 @@ function login_input(event){
     console.log(obj);
      if(obj.username === username && obj.password === password)
      {
-        alert("Login Successful");
+        alert("Login Successful !");
         window.location.href="./customers_admin.html";
      }
      else{

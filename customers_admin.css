@@ -67,6 +67,17 @@ body{
     cursor: pointer;
 }
 
+#right-side div:nth-child(1){
+    display: flex;
+    justify-content: space-around;
+    text-decoration: underline;
+}
 
-
+#customer_feedback{
+    font-size: 25px;
+    font-weight: bolder;
+    text-decoration:dotted;
+    margin-top:1.5%;
+    color:black;
+}
 

@@ -38,4 +38,7 @@ function boundCards() {
 
 /* second cont */
 
+let accounticon = document.querySelector("#accounticon");
+accounticon.innerHTML = localStorage.getItem("sign_username");
+
 

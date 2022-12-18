@@ -57,6 +57,14 @@ body{
     text-align: start;
 }
 
+#SignUp_page img{
+    width:35%;
+    margin-bottom:1px;
+}
+
+#top_section{
+   margin-top:-5%;
+}
 
 
 
