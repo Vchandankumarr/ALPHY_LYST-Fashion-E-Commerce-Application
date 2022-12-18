@@ -2,6 +2,7 @@ let signin_navbar = document.querySelector("#signin_navbr");
 let signinContainer = document.querySelector("#signin_page");
 signinContainer.innerHTML = `
                      <form>
+                        <img src="./alpha.jpg"/>
                         <h1>The only fashion site you need</h1><br>
                      <p>
                             <label>Email</label>
@@ -47,10 +48,13 @@ function checkdata(input,data){
    let flag = false;
       for(let i=0;i<data.length;i++){
             if(input.email == data[i].emailId && input.password == data[i].password){
-                    alert("Login Successful");
+                    alert("Login Successful !");
                     flag=true;
-                    // let signin_navbar = document.querySelector("#signin_navbr");
-                    // signin_navbar.innerHTML = "Account";
+                   // console.log(data[i]);
+                   // console.log(data[i].firsName,data[i].lastName);
+                   let fullname = `${data[i].firsName} ${data[i].lastName}`
+                    localStorage.setItem("sign_username",fullname);
+                window.location.href = "./dummy.html";
             }
       };
     if(flag!=true)

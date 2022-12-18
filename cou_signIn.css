@@ -52,8 +52,10 @@ body{
     font-weight: bolder;
 }
 
-
-
+#signin_page img{
+    width:40%;
+    margin-left:27%;
+}
 
 
 /* slider */       /* -------------------------------------------------------- */

@@ -25,7 +25,7 @@ async function userdetails(obj){
         })
         if(res.ok){
             console.log(await res.json());
-            alert("Sign Up is seccussful");
+            alert("Sign Up Successful !");
             window.location.href="./cou_signIn.html"
         }
     } catch (error) {
