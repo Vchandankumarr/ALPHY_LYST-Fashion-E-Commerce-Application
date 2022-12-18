@@ -51,7 +51,7 @@ function display(data){
                     <div>
                         <p><b>Product:</b> ${elem.Product_name}</p>
                         <p><b>Brands:</b> ${elem.brands}</p>
-                        <p><b>Price:</b> ${elem.price}</p>
+                        <p><b>Price:</b> ₹ ${elem.price}</p>
                         <p><b>Description:</b> ${elem.description}</p>
                         
                         <p><b>Item:</b> ${elem.type}</p>

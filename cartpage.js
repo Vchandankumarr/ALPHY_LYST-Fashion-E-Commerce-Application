@@ -236,9 +236,9 @@ function payment(element)
 {
 console.log(element)
 
- localStorage.setItem("buy-list",JSON.stringify(buy))
+ localStorage.setItem("buy-list",JSON.stringify(element))
 
-  window.open("./payment.html", "_self")
+  window.location.href="./payment.html"
 }
 
 async function Addtowishlist(id,name)
@@ -294,6 +294,9 @@ async function addproducttowishlist(data){
     
   }
 }
+
+let accounticon = document.querySelector("#accounticon");
+accounticon.innerHTML = localStorage.getItem("sign_username");
 
 
 

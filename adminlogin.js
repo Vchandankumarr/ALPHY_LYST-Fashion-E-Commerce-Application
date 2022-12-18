@@ -1,5 +1,5 @@
-let username = "admin";
-let password = "admin";
+let username = "alpha";
+let password = "alpha";
 let login_button = document.querySelector("#admin_login form");
 
 

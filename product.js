@@ -29,7 +29,7 @@ function display(data){
                 <div id="childOne">
                      <h2>${item.brands}</h2>
                      <p>${item.Product_name}</p>
-                     <h2>$${item.price}</h2>
+                     <h2>₹ ${item.price}</h2>
                      <div id="sub_child">
                             <i class="fa-sharp fa-solid fa-link iconchain"></i>
                               <p>${item.description}</p>
@@ -266,3 +266,5 @@ async function displaySearch(val){
         
     }
 } 
+let accounticon = document.querySelector("#accounticon");
+accounticon.innerHTML = localStorage.getItem("sign_username");

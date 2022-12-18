@@ -8,47 +8,244 @@
      <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <title>Alpha | Lyst | Product</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+     <script src="./navBar.js" defer ></script>
     <link rel="stylesheet" href="product.css">
     <link rel="stylesheet" href="navBar.css">
 </head>
 </style>
 <body>
     <div id="navBar">
-        <div id="navTop">
-      <div><a href="./adminlogin.html">Admin Panel</a></div>
-      <div><a href="#">IN-US$</a></div>
-      <div class="help-signin-account"><a href="#">Help</a><i class="fa-solid fa-angle-down"></i>
-         <ul class="sub-help">
-         <li><a href="#">Help Center</a></li>
-         <li><a href="#">Contact Us</a></li>
-         <li><a href="#">About Us</a></li>
-         <li><a href="#">Careers</a></li>
-         
-         </ul>
+  <div id="navTop">
+
+<div><a href="./adminlogin.html">Admin Panel</a></div>
+<!-- <div><a href="#">IN-US$</a></div> -->
+
+<div class="help-signin-account"><a href="#parent">Help</a><i class="fa-solid fa-angle-down"></i>
+   <ul class="sub-help">
+   <li><a href="./customer_care.html">Help Center</a></li>
+   <li><a href="./customer_care.html">Contact Us</a></li>
+   <li><a href="#parent">About Us</a></li>
+   <li><a href="#parent">Careers</a></li>
+   
+   </ul>
+  </div>
+  <!-- use this as sign in -->
+<div class="help-signin-account"><a href="#" id="accounticon">Account</a><i class="fa-solid fa-angle-down"></i>
+<ul class="sub-account sub-help">
+   <li><a href="./cou_signIn.html">Alerts</a></li>
+<!--    <li><a href="./cou_signIn.html">Saved items</a></li>
+   <li><a href="./cou_signIn.html">Followed Brands</a></li> -->
+   <!-- <li><a href="./cou_signIn.html">My Searches</a></li> -->
+   <li><a href="./cou_signIn.html">Settings</a></li>
+   <!-- <li><button>Sign Out</button></li> -->
+
+   </ul>
+</div>
+ </div>
+ <div id="navBottom">
+<div> <a href="./dummy.html"><img src="./ALPHA_LOGOF.jpg" width="150px" alt=""></a></div>
+  <!--START dropDown MEnu for WOMEN & MEN-->
+
+
+  <div class="dropdown" data-dropdown><button class="link" data-dropdown-button>WOMEN</button><div class="drop-down-Menu information-grid">
+     <div class="dropMenu-box">
+     <div>
+        <div class="drop-down-heading">Clothing
+        <div class="drop-down-links">
+           <a href="#" class="link">All jewelry</a>
+           <a href="#" class="link">Bracelets</a>
+           <a href="#" class="link">Brooches</a>
+           <a href="#" class="link">Earrings and ear cuffs</a>
+           <a href="#" class="link">Rings</a>
+           <a href="#" class="link">New Arrivals in Jewelry</a>
+           <a href="#" class="link"><i class="fa-solid fa-tag" style="color: red;"></i>Jewelry on Sale</a>
         </div>
-        <!-- use this as sign in -->
-      <div class="help-signin-account"><a href="#">Sign-In</a><i class="fa-solid fa-angle-down"></i>
-      <ul class="sub-account sub-help">
-         <li><a href="#">Alerts</a></li>
-         <li><a href="#">Saved items</a></li>
-         <li><a href="#">Followed Brands</a></li>
-         <li><a href="#">My Searches</a></li>
-         <li><a href="#">Settings</a></li>
-         <li><button>Sign Out</button></li>
-      
-         </ul>
-      </div>
-       </div>
-       <div id="navBottom">
-        <div> <img src="./ALPHA_LOGOF.jpg" width="150px" alt=""></div>
-        <div><button class="link">WOMEN</button></div>
-        <div><button class="link">MEN</button></div>
-        <div class="box" ><i class="fa-solid fa-magnifying-glass"></i><input oninput="search()" type="text" name="" id="searchFunction" placeholder='  SEARCH (E.G "VALENTINO DRESSES")'></div>
-        <div class="wish-alert"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></i></div>
-        <div class="wish-alert"><a href="#"><i class="fa-regular fa-heart"></i></a></i></div>
-        <div class="wish-alert"><a href="#"><i class="fa-regular fa-bell"></i></a></i></div>
-       </div>
-       </div>
+        </div>
+     </div>
+     <div>
+        <div class="drop-down-heading">Shoes
+        <div class="drop-down-links">
+           <a href="#" class="link">All Shoes</a>
+           <a href="#" class="link">Boots</a>
+           <a href="#" class="link">Flats and flat shoes</a>
+           <a href="#" class="link">Heels</a>
+           <a href="#" class="link">Sneakers</a>
+           <a href="#" class="link">New Arrivals in Shoes</a>
+           <a href="#" class="link"><i class="fa-solid fa-tag" style="color: red;"></i>Shoes on Sale</a>
+        </div>
+        </div>
+     </div>
+     <div>
+        <div class="drop-down-heading">Accessories
+        <div class="drop-down-links">
+           <a href="#" class="link">All Accessories</a>
+           <a href="#" class="link">Belts</a>
+           <a href="#" class="link">Phone cases</a>
+           <a href="#" class="link">Face masks</a>
+           <a href="#" class="link">Gloves</a>
+           <a href="#" class="link">Hats</a>
+           <a href="#" class="link"><i class="fa-solid fa-tag" style="color: red;"></i>Accessories on Sale</a>
+        </div>
+        </div>
+     </div>
+     <div>
+        <div class="drop-down-heading">Bags
+        <div class="drop-down-links">
+           <a href="#" class="link">All Bags</a>
+           <a href="#" class="link">Backpacks</a>
+           <a href="#" class="link">Bag accessories</a>
+           <a href="#" class="link">Shoulder bags</a>
+           <a href="#" class="link">Top-handle bags</a>
+           <a href="#" class="link">Tote bags</a>
+           <a href="#" class="link"><i class="fa-solid fa-tag" style="color: red;"></i>Bags on Sale</a>
+        </div>
+        </div>
+     </div>
+     <div>
+        <div class="drop-down-heading">Jewelry
+        <div class="drop-down-links">
+           <a href="#" class="link">All Jewelry</a>
+           <a href="#" class="link">Bracelets</a>
+           <a href="#" class="link">Brooches</a>
+           <a href="#" class="link">Necklaces</a>
+           <a href="#" class="link">New Arrivals in Jewelry</a>
+           <a href="#" class="link">Rings</a>
+           <a href="#" class="link"><i class="fa-solid fa-tag" style="color: red;"></i>Jewelry on Sale</a>
+        </div>
+        </div>
+     </div>
+     <div>
+        <div class="drop-down-heading">Brands
+        <div class="drop-down-links">
+           <a href="#" class="link">Balenciaga</a>
+           <a href="#" class="link">Bottega Veneta</a>
+           <a href="#" class="link">Chloé</a>
+           <a href="#" class="link">Ganni</a>
+           <a href="#" class="link">Gucci</a>
+           <a href="#" class="link">H&M</a>
+           <a href="#" class="link"><i class="fa-solid fa-tag" style="color: red;"></i>Isabel Marant</a>
+        </div>
+        </div>
+     </div>
+     <div>
+        <div class="drop-down-heading-women">All Women's
+        <div class="drop-down-links">
+        </div>
+        </div>
+     </div>
+     <div>
+        <div class="drop-down-heading"><i class="fa-solid fa-tag" style="color: red;"></i>Sale
+        <div class="drop-down-links">
+        </div>
+        </div>
+     </div>
+     
+     </div>
+  </div>
+  
+  <button class="link" data-dropdown-button>MEN</button><div class="drop-down-Menu information-grid">
+     <div class="dropMenu-box">
+     <div>
+        <div class="drop-down-heading">Clothing
+        <div class="drop-down-links">
+           <a href="./product.html" class="link">All jewelry</a>
+           <a href="./product.html" class="link">Bracelets</a>
+           <a href="./product.html" class="link">Brooches</a>
+           <a href="./product.html" class="link">Earrings and ear cuffs</a>
+           <a href="./product.html" class="link">Rings</a>
+           <a href="./product.html" class="link">New Arrivals in Jewelry</a>
+           <a href="./product.html" class="link"><i class="fa-solid fa-tag" style="color: red;"></i>Jewelry on Sale</a>
+        </div>
+        </div>
+     </div>
+     <div>
+        <div class="drop-down-heading">Shoes
+        <div class="drop-down-links">
+           <a href="./product.html" class="link">All Shoes</a>
+           <a href="./product.html" class="link">Boots</a>
+           <a href="./product.html" class="link">Flats and flat shoes</a>
+           <a href="./product.html" class="link">Heels</a>
+           <a href="./product.html" class="link">Sneakers</a>
+           <a href="./product.html" class="link">New Arrivals in Shoes</a>
+           <a href="./product.html" class="link"><i class="fa-solid fa-tag" style="color: red;"></i>Shoes on Sale</a>
+        </div>
+        </div>
+     </div>
+     <div>
+        <div class="drop-down-heading">Accessories
+        <div class="drop-down-links">
+           <a href="./product.html" class="link">All Accessories</a>
+           <a href="./product.html" class="link">Belts</a>
+           <a href="./product.html" class="link">Phone cases</a>
+           <a href="./product.html" class="link">Face masks</a>
+           <a href="./product.html" class="link">Gloves</a>
+           <a href="./product.html" class="link">Hats</a>
+           <a href="./product.html" class="link"><i class="fa-solid fa-tag" style="color: red;"></i>Accessories on Sale</a>
+        </div>
+        </div>
+     </div>
+     <div>
+        <div class="drop-down-heading">Bags
+        <div class="drop-down-links">
+           <a href="./product.html" class="link">All Bags</a>
+           <a href="./product.html" class="link">Backpacks</a>
+           <a href="./product.html" class="link">Bag accessories</a>
+           <a href="./product.html" class="link">Shoulder bags</a>
+           <a href="./product.html" class="link">Top-handle bags</a>
+           <a href="./product.html" class="link">Tote bags</a>
+           <a href="./product.html" class="link"><i class="fa-solid fa-tag" style="color: red;"></i>Bags on Sale</a>
+        </div>
+        </div>
+     </div>
+     <div>
+        <div class="drop-down-heading">Jewelry
+        <div class="drop-down-links">
+           <a href="./product.html" class="link">All Jewelry</a>
+           <a href="./product.html" class="link">Bracelets</a>
+           <a href="./product.html" class="link">Brooches</a>
+           <a href="./product.html" class="link">Necklaces</a>
+           <a href="./product.html" class="link">New Arrivals in Jewelry</a>
+           <a href="./product.html" class="link">Rings</a>
+           <a href="./product.html" class="link"><i class="fa-solid fa-tag" style="color: red;"></i>Jewelry on Sale</a>
+        </div>
+        </div>
+     </div>
+     <div>
+        <div class="drop-down-heading">Brands
+        <div class="drop-down-links">
+           <a href="./product.html" class="link">Balenciaga</a>
+           <a href="./product.html" class="link">Bottega Veneta</a>
+           <a href="./product.html" class="link">Chloé</a>
+           <a href="./product.html" class="link">Ganni</a>
+           <a href="./product.html" class="link">Gucci</a>
+           <a href="./product.html" class="link">H&M</a>
+           <a href="./product.html" class="link"><i class="fa-solid fa-tag" style="color: red;"></i>Isabel Marant</a>
+        </div>
+        </div>
+     </div>
+     <div>
+        <div class="drop-down-heading">Watches
+        <div class="drop-down-links">
+        </div>
+        </div>
+     </div>
+     <div>
+        <div class="drop-down-heading"><i class="fa-solid fa-tag" style="color: red;"></i>Sale
+        <div class="drop-down-links">
+        </div>
+        </div>
+     </div>
+     
+     </div>
+  </div></div>
+  <!--END of Drop DOWN MENU  -->
+  <div class="box" ><i class="fa-solid fa-magnifying-glass"></i><input  type="text" name="" id="searchFunction" oninput="search()" placeholder='  SEARCH (E.G "VALENTINO DRESSES")'></div>
+  <div class="wish-alert"><a href="./cartpage.html"><i class="fa-solid fa-cart-shopping"></i></a></div>
+  <div class="wish-alert"><a href="./wishlist.html"><i class="fa-regular fa-heart"></i></a></i></div>
+  <div class="wish-alert"><a href="./cou_signUp.html"><i class="fa-regular fa-bell"></i></a></i></div>
+ </div>
+ </div>
+<!-- END OF NAV BAR STILL MAY ADD SOME FEAUTERS IF THE TIME SUFFICIENT-->
     <div id="Browse">
         <div>
             <div>
@@ -67,18 +264,18 @@
     </div>
     <div id="select">
         <select name="" id="sort" onchange="sorting()">
-            <option value="rec" id="rec">Recomendation</option>
-            <option value="asc" id="asc">SortLowToHigh</option>
-            <option value="desc" id="desc">SortHighToLow</option>
+            <option value="rec" id="rec">Recommendation</option>
+            <option value="asc" id="asc">Sort Low To High</option>
+            <option value="desc" id="desc">Sort High To Low</option>
         </select>
     </div>
     <div id="showingAllFlex">
             <div id="filter">
                 <div class="filter">Filter</div>
                 <div id="noFilter">No filters Applied</div>
-                <div class="filter border Dofilter" id="access">accessories</div>
-                <div class="filter border Dofilter">shoes</div>
-                <div class="filter border Dofilter">clothes</div>
+                <div class="filter border Dofilter" id="access">Accessories</div>
+                <div class="filter border Dofilter">Shoes</div>
+                <div class="filter border Dofilter">Clothes</div>
                 <div class="filter border Dofilter">Homes</div>
                 <div class="filter border" id="clear">Clear All Filters</div>
         </div>
