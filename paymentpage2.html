@@ -41,7 +41,7 @@
             <input id="cardNum" onKeyPress="if(this.value.length==16) return false;" type="number" placeholder="Card Number">
             <div id="cvv">
                 <input id="dateofcard" type="date" placeholder="MM/YY">
-                <input id="securitycode" type="number" onKeyPress="if(this.value.length==3) return false;" placeholder="Security Code" />
+                <input id="securitycode" type="number" onKeyPress="if(this.value.length==3) return false;" placeholder="Password" />
             </div>
             <div>
                 
@@ -67,8 +67,8 @@
                     <p>Discounted Shipping is yours. Exclusions <br>apply.</p>
                 </div>
                 <div class="itemstotal">
-                    <p>Items</p>
-                    <p>₹</p>
+                    <p>Total</p>
+                    <p id="totalcost">₹</p>
                 </div>
                 <div class="itemstotal">
                     <p>Shipping</p>
@@ -80,20 +80,23 @@
                 </div>
                 <div class="itemstotal">
                     <p>Items</p>
-                    <p>
+                    <p id="priceofitem">
                         <!-- append price here -->
                     </p>
                 </div>
                 <div id="promoCode">
                     + Promo Code
                 </div>
+                <h2>Product Details</h2>
                 <div id="product_details">
-                    <div id="product_img"></div>
                     <div>
-                        <p>
+                        <img src="" alt=""  id="product_img">
+                    </div>
+                    <div>
+                        <p id="productTitle">
                             <!-- append title here -->
                         </p>
-                        <p>
+                        <p id="productPrice">
                             <!-- append price here -->
                         </p>
                     </div>
@@ -104,6 +107,21 @@
 </body>
 </html>
 <script>
+
+
+    let productData = JSON.parse(localStorage.getItem("buy-list"));
+    console.log(productData);
+    let productIMG = document.getElementById("product_img");
+    let ptitle = document.getElementById("productTitle");
+    let totalcost = document.getElementById("totalcost");
+    let priceofitem = document.getElementById("priceofitem")
+    let pPrice = document.getElementById("productprice")
+
+    priceofitem.innerHTML = "₹"+productData['price'];
+    totalcost.innerHTML = "₹" + (Number(17795)+Number(productData.price));
+    ptitle.innerHTML = productData.Product_name;
+    productIMG.src = productData.image;
+
 
     let localdata = JSON.parse(localStorage.getItem("address"));
     let dAddress = document.getElementById("daddress");
@@ -118,7 +136,7 @@
         }
         else{
             alert("Payment successfull, Thankyou for shopping");
-            window.location.href = "index.html"
+            window.location.href = "dummy.html"
         }
         
     }

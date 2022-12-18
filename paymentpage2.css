@@ -58,6 +58,7 @@
     color: white;
     border: none;
     border-radius: 2px;
+    cursor: pointer;
 }
 #coupon{
     border: 1px solid rgb(85,133,0);
@@ -74,6 +75,7 @@
 }
 #product_details{
     display: flex;
+    margin-top: 20px;
 }
 #promoCode{
     color: deepskyblue;
@@ -143,6 +145,7 @@
     color: white;
     border: none;
     border-radius: 3px;
+    cursor: pointer;
 }
 #orderBtn+p{
     text-align: center;
@@ -169,4 +172,7 @@
     #orders{
         margin: auto;
     }
+}
+#product_img{
+    width:70%;
 }
