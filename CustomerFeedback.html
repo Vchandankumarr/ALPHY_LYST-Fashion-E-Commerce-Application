@@ -29,7 +29,7 @@
 <script>
     async function randerFeedback(){
         try {
-            let response=await fetch("http://localhost:3000/CustomerQueries");
+            let response=await fetch("https://636d6db591576e19e32848c0.mockapi.io/CustomerQueries");
             if(response.ok){
                 let result=await response.json();
                 display(result);

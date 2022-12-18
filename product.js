@@ -34,7 +34,7 @@ function display(data){
                             <i class="fa-sharp fa-solid fa-link iconchain"></i>
                               <p>${item.description}</p>
                       </div>
-                      <button id="add" data-id=${item.id}>Add TO cart</button>
+                      <button id="add" data-id=${item.id}>Add TO Cart</button>
                 </div>
                 <div id="childTwo">
                        <i id="wishlist" data-id=${item.id} class="fa-regular fa-heart fa-2x"></i>
@@ -209,4 +209,25 @@ async function ClearAllFilter(){
     }
 };
 
+function  search(){
+let val =document.querySelector("#searchFunction").value;
+displaySearch(val)
+}
 
+async function displaySearch(val){
+    try {
+        let response=await fetch(`https://639aeab431877e43d67b3d7d.mockapi.io/products/?filter=${val}`,{
+            method:"GET",
+            headers:{
+                "Content-Type":"application/json"
+            }
+        })
+        if(response.ok){
+            let result =await response.json();
+           display(result);
+
+        }
+    } catch (error) {
+        
+    }
+} 

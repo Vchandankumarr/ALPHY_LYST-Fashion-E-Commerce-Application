@@ -176,9 +176,10 @@ select{
 #add{
     padding:10px  8px;
     margin:10px 10px;
-    background-color: #7777;
+    background-color: black;
     color: whitesmoke;
     font-weight: bolder;
+    cursor: pointer;
 }
 #products{
     margin-top: 7%;

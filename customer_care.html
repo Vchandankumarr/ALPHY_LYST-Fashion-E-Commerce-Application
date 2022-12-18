@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customer_Care</title>
+     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <title>Alpha | Lyst | Customer_Care</title>
     <style>
         form{
             width:40%;
@@ -119,7 +120,7 @@
     })
     async function DescriptionFetch(data){
         // console.log(data);
-        let response=await fetch("http://localhost:3000/CustomerQueries",{
+        let response=await fetch("https://636d6db591576e19e32848c0.mockapi.io/CustomerQueries",{
             method:"POST",
         headers:{
             "Content-Type":"application/json"
