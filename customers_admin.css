@@ -1,7 +1,9 @@
 body{
     background-color: rgb(250, 250, 250);
 }
-
+#logo{
+   margin-left:42%;
+}
 #admin_desbord_navbar{
     height:30px;
     text-align: center;

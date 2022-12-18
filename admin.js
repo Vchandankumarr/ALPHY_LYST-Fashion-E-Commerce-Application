@@ -1,12 +1,14 @@
 // let products_button = document.querySelector("#products_button");
 // products_button.addEventListener("click",fetchdata());
 let productBaseUrl = "https://639aeab431877e43d67b3d7d.mockapi.io/products";
+let total = 60;
 
 window.addEventListener("load", () => {
     fetchdata();
+    total = localStorage.getItem("total")||60;
 });
 
-async function fetchdata(page_number=1,data_limit_perpage=10){
+async function fetchdata(page_number=1,data_limit_perpage=6){
     try {
         let res = await fetch(`${productBaseUrl}?page=${page_number}&limit=${data_limit_perpage}`,{
             method: "GET",
@@ -15,14 +17,18 @@ async function fetchdata(page_number=1,data_limit_perpage=10){
                }
             })
             if(res.ok){
+                //let token = await res.json();
                //console.log(res);
                 // console.log(res.headers.gets("x-"))
+                //console.log(res);
                 let out = await res.json();
-                let total = out.length;
-                 document.querySelector(".total").innerHTML = `Total Products: ${total}`
                 //console.log(out);
-                let total_page_show = Math.ceil(+(56)/data_limit_perpage);
+                localStorage.setItem("total",total);
+                total = localStorage.getItem("total");
+                let total_page_show = Math.ceil(total/data_limit_perpage);
                // console.log(total_page_show);
+                document.querySelector(".total").innerHTML = `Total Products: ${total}`;
+                
                 display(out);
                 renderPaginationButtons(total_page_show);
             }
@@ -78,6 +84,7 @@ async function deleteItem(id){
             },
         });
         if(res.ok){
+            --total;
             fetchdata();
             alert("Product has been deleted succussfully");
         }
@@ -112,6 +119,7 @@ async function add_request(obj){
             body : JSON.stringify(obj),
         });
         if(res.ok){
+            --total;
             fetchdata();
             alert("New Product has been added successfully");
         }
@@ -145,7 +153,7 @@ function renderPaginationButtons(total_pages){
  function CreatePagButton(total_page){
         let array = [];
         for(let page=1; page<=total_page; page++){
-            array.push(getAsButton(page,"pagination-btn",page))
+            array.push(getAsButton(page,"pagination-btn pagi-btn-color",page))
         }
        // console.log(array);
         return array;
