@@ -117,12 +117,13 @@ text-decoration: none;
 .sub-account>li:last-child{
 text-align: center;
 }
-.sub-account>li>button{
+.sub-account>li>a>button{
  margin-top: 20px;
  height: 40px;
  width: 80%;
  background-color: #f2f2f2;
  border: none;
+ cursor: pointer;
 }
 
 /* START dropdown for WOMEN and MEN */

@@ -51,7 +51,7 @@ function checkdata(input,data){
                     flag=true;
                     // let signin_navbar = document.querySelector("#signin_navbr");
                     // signin_navbar.innerHTML = "Account";
-                    window.location.href="./dummey.html";
+                    window.location.href="./dummy.html";
             }
       };
     if(flag!=true)

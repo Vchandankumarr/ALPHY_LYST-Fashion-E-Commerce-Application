@@ -1,3 +1,5 @@
+let searchbtn = document.getElementById("search-btn");
+
 document.addEventListener("click", (e) => {
   const isDropdownButton = e.target.matches("[data-dropdown-button]");
   if (!isDropdownButton && e.target.closest("[data-dropdown]") != null) return;
@@ -13,3 +15,7 @@ document.addEventListener("click", (e) => {
     dropdown.classList.remove("active");
   });
 });
+
+searchbtn.addEventListener("click",()=>{
+  window.location.href="./product.html"
+})
