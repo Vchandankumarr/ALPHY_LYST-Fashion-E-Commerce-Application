@@ -119,7 +119,7 @@ async function add_request(obj){
             body : JSON.stringify(obj),
         });
         if(res.ok){
-           total++;
+           ++total;
             fetchdata();
             alert("New Product has been added successfully");
         }
