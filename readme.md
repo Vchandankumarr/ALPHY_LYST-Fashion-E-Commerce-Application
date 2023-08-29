@@ -3,7 +3,7 @@ Welcome to the ALPHY_LYST Fashion E-Commerce Application! This project showcases
 
 <img src="![Alt text](Alpha_Lyst.png)" alt="">
 
-<h3 target="_blank">Live Demo Link https://symphonious-lebkuchen-33f9c1.netlify.app/ </h3>
+<h3 target="blank">Live Demo Link https://symphonious-lebkuchen-33f9c1.netlify.app/ </h3>
 
 <h2>Table of Contents</h2>
 <ul>
