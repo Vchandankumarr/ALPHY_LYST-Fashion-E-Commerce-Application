@@ -2,7 +2,7 @@
 Welcome to the LYST Fashion E-Commerce Platform! This project showcases a trendy fashion and accessories e-commerce platform where users can explore and purchase stylish apparel and accessories. Our collaborative team of four developers has worked tirelessly over the span of just 4 days to bring you this application, demonstrating various features and functionalities.
 
 
-<h3>Live Demo Link https://symphonious-lebkuchen-33f9c1.netlify.app/ </h3>
+<h3 target="_blank">Live Demo Link https://symphonious-lebkuchen-33f9c1.netlify.app/ </h3>
 
 <h2>Table of Contents</h2>
 <ul>
@@ -44,23 +44,33 @@ Welcome to the LYST Fashion E-Commerce Platform! This project showcases a trendy
   <strong>Mock API</strong>
 </p>
 
-<h2 id="contributors">Contributors</h2>
-<ul>
-    <li><a href="https://github.com/sonu25122000">@Sonu Kumar</a></li>
-    <li><a href="https://github.com/mevicky9254">@Vikki Kumar</a></li>
-    <li><a href="https://github.com/Abhinav-Mourya">@Abhinav Mourya</a></li>
-    <li><a href="https://github.com/nadeemm763">Nadeem</a></li> 
-</ul>
-
-<h1>[Getting Started]</h1>
- <h3>Execution</h3>
+<h2 id="installation">Installation</h2>
     <p>If you want to run our project in your local machine</p>
     <p>Follow the given steps:</p>
   <ul>
-    <li>Clone our respository <a href="https://github.com/Abhinav-Mourya/puzzled-apparatus-1796">https://github.com/Abhinav-Mourya/puzzled-apparatus-1796</a></li>
+    <li>Clone our respository <a href="https://github.com/Vchandankumarr/smart-sign-7322">https://github.com/Vchandankumarr/smart-sign-7322</a></li>
     <li>Open our code in VS code </li>
     <li>Congrats !  you have successfully sarted the application.</li>
   </ul>
+
+<h2 id="usage">Usage</h2>
+<ol>
+  <li>Open the <code>index.html</code> file in your preferred web browser to access the landing page.</li>
+  <li>Navigate through the platform using the provided links in the navigation bar.</li>
+  <li>Explore products, add them to your cart, and proceed to checkout.</li>
+</ol>
+
+<h2 id="mock-api">Mock API</h2>
+<p>We have set up a mock server to simulate interactions with a backend API. This enables data retrieval and manipulation without a live backend connection.</p>
+
+
+<h2 id="contributors">Contributors</h2>
+<ul>
+     <li><a href="https://github.com/Vchandankumarr">@Vchandan Kumarr</a></li>
+      <li><a href="https://github.com/Ashwin-krish-nan">@Ashwin-krish-nan</a></li>
+       <li><a href="https://github.com/Sakshi0704">@Km Sakshi</a></li>
+       <li><a href="https://github.com/Yunuslala">@Yunuslala</a></li> 
+</ul>
 
 <h2 id="acknowledgments">Acknowledgments</h2>
     <p>We would like to express our gratitude to our mentors and peers for their guidance and support during the development of this project.</p>
