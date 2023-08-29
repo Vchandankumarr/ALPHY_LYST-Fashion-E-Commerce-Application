@@ -1,7 +1,7 @@
 # ALPHY_LYST Fashion E-Commerce Application
 Welcome to the ALPHY_LYST Fashion E-Commerce Application! This project showcases a trendy fashion and accessories e-commerce platform where users can explore and purchase stylish apparel and accessories. Our collaborative team of four developers has worked tirelessly over the span of just 4 days to bring you this application, demonstrating various features and functionalities.
 
-<img src="![Alt text](Alpha_Lyst.png)" alt="">
+"![Alt text](Alpha_Lyst.png)"
 
 <h3 target="blank">Live Demo Link https://symphonious-lebkuchen-33f9c1.netlify.app/ </h3>
 
