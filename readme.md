@@ -1,6 +1,7 @@
-# LYST Fashion E-Commerce Platform
-Welcome to the LYST Fashion E-Commerce Platform! This project showcases a trendy fashion and accessories e-commerce platform where users can explore and purchase stylish apparel and accessories. Our collaborative team of four developers has worked tirelessly over the span of just 4 days to bring you this application, demonstrating various features and functionalities.
+# ALPHY_LYST Fashion E-Commerce Application
+Welcome to the ALPHY_LYST Fashion E-Commerce Application! This project showcases a trendy fashion and accessories e-commerce platform where users can explore and purchase stylish apparel and accessories. Our collaborative team of four developers has worked tirelessly over the span of just 4 days to bring you this application, demonstrating various features and functionalities.
 
+<img src="![Alt text](Alpha_Lyst.png)" alt="">
 
 <h3 target="_blank">Live Demo Link https://symphonious-lebkuchen-33f9c1.netlify.app/ </h3>
 
@@ -18,7 +19,7 @@ Welcome to the LYST Fashion E-Commerce Platform! This project showcases a trendy
 
 
 <h2 id="introduction">Introduction</h2>
-<p>LYST is a web-based fashion and accessories e-commerce platform that offers users a diverse range of trendy apparel and stylish accessories. From a user-friendly navigation bar to a seamless shopping experience, our platform aims to provide customers with the latest fashion trends and a convenient shopping journey.</p>
+<p>ALPHY_LYST is a web-based fashion and accessories e-commerce platform that offers users a diverse range of trendy apparel and stylish accessories. From a user-friendly navigation bar to a seamless shopping experience, our platform aims to provide customers with the latest fashion trends and a convenient shopping journey.</p>
 
 <h2 id="features">Features</h2>
 <p>Our platform comes equipped with the following features:</p>
@@ -50,7 +51,7 @@ Welcome to the LYST Fashion E-Commerce Platform! This project showcases a trendy
   <ul>
     <li>Clone our respository <a href="https://github.com/Vchandankumarr/smart-sign-7322">https://github.com/Vchandankumarr/smart-sign-7322</a></li>
     <li>Open our code in VS code </li>
-    <li>Congrats !  you have successfully sarted the application.</li>
+    <li>Congrats !  you have successfully started the application.</li>
   </ul>
 
 <h2 id="usage">Usage</h2>
@@ -70,9 +71,10 @@ Welcome to the LYST Fashion E-Commerce Platform! This project showcases a trendy
       <li><a href="https://github.com/Ashwin-krish-nan">@Ashwin-krish-nan</a></li>
        <li><a href="https://github.com/Sakshi0704">@Km Sakshi</a></li>
        <li><a href="https://github.com/Yunuslala">@Yunuslala</a></li> 
+       <li><a href="https://github.com/sagardeswal123">@Sagar Deswal</a></li> 
 </ul>
 
 <h2 id="acknowledgments">Acknowledgments</h2>
     <p>We would like to express our gratitude to our mentors and peers for their guidance and support during the development of this project.</p>
 
-  <p>Thank you for choosing LYST Fashion E-Commerce Platform for your shopping needs! If you encounter any issues or have suggestions for improvements, feel free to reach out to us through the contact information provided in the repository. Happy shopping!</p>
+  <p>Thank you for visiting ALPHY_LYST Fashion E-Commerce Application! If you encounter any issues or have suggestions for improvements, feel free to reach out to us through the contact information provided in the repository. Wishing you happiness as well!</p>
